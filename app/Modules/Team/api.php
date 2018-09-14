@@ -5,6 +5,7 @@
       Route::post('teams', 'TeamApiController@store');
       Route::put('teams/{id}', 'TeamApiController@update');
       Route::delete('teams/{id}', 'TeamApiController@delete');
+      Route::get('Team/search', 'TeamApiController@search');
 
   });
 

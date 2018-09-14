@@ -69,4 +69,18 @@ class TeamApiController extends Controller
 
         return response()->json(['data' => null, 'message' => 'Deleted Successfully', 'error' => false], 200);
     }
+    public function search(Request $request)
+    {
+        $filed = $request->filed;
+        $order = $request->order;
+        $searchtext = $request->searchtext;
+
+        if($searchtext){
+            $data = Team::where($filed,$searchtext)->orderBy($filed,$order)->get();
+        }else{
+            $data = Team::orderBy($filed,$order)->get();
+        }
+        return MyResponse(0, $data, MassageEn()[0], 200);
+
+    }
 }
