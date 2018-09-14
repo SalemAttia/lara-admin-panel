@@ -1,0 +1,6 @@
+
+ Route::group(['middleware' => ['AdminAuth', 'Roles'], 'prefix' => 'dashboard' , 'as' => 'admin.'], function () {
+       Route::get('ExportExcel/DummyRoute','ExportDataExcel@export');
+       Route::post('readExcel/DummyRoute','ExportDataExcel@readExcel');
+        Route::get('xlxTemplate/DummyRoute','ExportDataExcel@ExportExcelTemplete');
+    });

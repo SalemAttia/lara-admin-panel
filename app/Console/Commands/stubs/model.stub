@@ -1,0 +1,43 @@
+<?php
+
+namespace App\Modules\DummyClass\Models;
+
+use Illuminate\Database\Eloquent\Model;
+
+
+class DummyClass extends Model
+{
+
+   protected $table = 'DummyModel';
+   protected $guarded = ['id'];
+   protected $hidden = [];
+   protected $dates = [];
+   public $timestamps = false;
+   static $ModelFunctionsNames = NFunc ;
+    static $xlx = xlxstatus;
+   protected $fillable = [
+            FilledsData
+       ];
+   static $cols = [
+        FilterDataCols
+   ];
+
+   public $casts = [
+
+       ];
+
+   static function createValidation(){
+        return [
+            validationData
+        ];
+   }
+
+   static function updateValidation($id){
+           return [
+                validationData
+           ];
+   }
+
+   functions
+
+}

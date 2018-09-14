@@ -1,0 +1,62 @@
+@extends('Dashboard::base.table')
+@section('tableTitle', 'DummyView')
+
+
+   @section('table')
+       <thead>
+       <tr>
+            <th>Id</th>
+           HeadFileds
+
+           <th>Action</th>
+       </tr>
+       </thead>
+
+       <tbody id="firstbody">
+         @php $i = 1; @endphp
+       @foreach($data as $val)
+       <tr>
+            <td>{{ $i++ }}</td>
+            Tabledcols
+
+           <td>
+               @include('Dashboard::base.actions', ['id' => $val->id, 'route' => 'admin.Route' ])
+           </td>
+       </tr>
+       @endforeach
+       </tbody>
+        <tbody v-if="loading" v-cloak id="secondbody">
+
+                 <tr v-for="(index,val) in data">
+                                <td>@{{index+1}}</td>
+                    Tabledcoview
+
+                      <td>
+                          @if(getCurrentAdminRoles()->hasOneAction(['admin.Route.show', 'admin.Route.edit', 'admin.Route.destroy']))
+                              <div class="dropdown">
+                                  <a href="#" class="btn m-btn m-btn--hover-accent m-btn--icon m-btn--icon-only m-btn--pill" data-toggle="dropdown"><i class="la la-ellipsis-h"></i></a>
+                                  <ul class="dropdown-menu dropdown-menu-right" role="menu">
+                                      @if(getCurrentAdminRoles()->hasAction('admin.Route.show'))
+                                          <li><a class="dropdown-item viewsale"  href="/dashboard/Route/@{{val.id}}"><i class="la la-eye"></i> View</a></li>
+                                      @endif
+
+
+                                          @if(getCurrentAdminRoles()->hasAction('admin.Route.edit'))
+                                              <li><a class="dropdown-item editsale" href="/dashboard/Route/@{{val.id}}/edit"><i class="la la-edit"></i> Edit</a></li>
+                                          @endif
+
+                                      @if(getCurrentAdminRoles()->hasAction('admin.Route.destroy'))
+                                          <li><a class="dropdown-item " href="#"  v-on:click="showModel(val.id)"><i class="la la-trash"></i> Delete</a></li>
+                                      @endif
+                                  </ul>
+
+                              </div>
+                          @endif
+                      </td>
+                  </tr>
+
+              </tbody>
+              <script>
+                  var url = 'Route';
+              </script>
+   @endsection

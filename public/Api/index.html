@@ -1,0 +1,2967 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title></title>
+
+    <link rel="stylesheet" href="Api/css/style.css"/>
+  
+    <script src="Api/js/all.js"></script>
+
+
+</head>
+
+<body class="">
+<a href="#" id="nav-button">
+      <span>
+        NAV
+        <img src="Api/images/navbar.png"/>
+      </span>
+</a>
+<div class="tocify-wrapper">
+    <img src="Api/images/logo.png"/>
+    <div id="toc">
+    </div>
+</div>
+<div class="page-wrapper">
+    <div class="dark-box"></div>
+    <div class="content">
+        <h1>Login With Email</h1>
+        <p>POST : <a href="http://192.241.234.75:5000/api/v1/login">http://192.241.234.75:5000/api/v1/login</a>
+            <br>
+            status -&gt; (true , false)<br>
+            data -&gt; array of objects will be empty if no data found<br>
+            error -&gt; error messages will be empty if no error  <br>
+        </p>
+        <pre>
+            <code>
+                Request <br>
+                {
+                "email":"ahmedsalem994.as@gmail.com",
+                "password":"123456789"
+                }
+            </code>
+        </pre>
+        <pre>
+            <code>
+                Response
+                <br>
+                {
+                "data": {
+                "id": 1,
+                "name": "salem",
+                "email": "ahmedsalem994.as@gmail.com",
+                "created_at": 2017-12-27 17:49:13,
+                "updated_at": "2017-12-27 17:49:13",
+                "username": "salem",
+                "phone": "012333",
+                "photo": "",
+                "facebook_id": null,
+                "api_token": "",
+                "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImM4ZTAwZmZmNDhmZDc3YzM0ZmMwZDllMThhOGI0NjQzNWIxMDg1ZDViOWViOTIwOTMyYzM0ZjI1YWYyZDkyYzM1YzIwOTgwN2RkOGUwOWEzIn0.eyJhdWQiOiI0IiwianRpIjoiYzhlMDBmZmY0OGZkNzdjMzRmYzBkOWUxOGE4YjQ2NDM1YjEwODVkNWI5ZWI5MjA5MzJjMzRmMjVhZjJkOTJjMzVjMjA5ODA3ZGQ4ZTA5YTMiLCJpYXQiOjE1MTQzOTY5OTYsIm5iZiI6MTUxNDM5Njk5NiwiZXhwIjoxNTQ1OTMyOTk2LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.nv3HY2xTA_0UodO6bQhcZe1go4CwOLQGqJ9ejfSn9v2G8-pbPTPCPTnYCOG3ejV9ot8907XiJ86zFxlLUuKpVpaZ-gL6-oLs3XfSkR3rf6PKj413LYx4puU1PC36Hvj9_Mr8FnnSoVyCcB5BGR-Eyl4-pNy7fDhiAf980Ezao1M2OWU3_0928mZVtFOqR6vmVLWIP29QI0eH36H-Xg3eoqGkqn_MxZxJHn6ffTj9JHV302i8H104xr9EePZlJ4vAtr26Colb0O60jrGdtXhJY4RgapqGgnP3hk8J5WUzeci-Ckt03hYy8tPZoJY8NKkBHcsMrTDe50TI-MwNKrmvp6fwl_cftWRA7Zh1_C9boU_vxBuyrBMvthK_wvorACQV4IIEFboloZJQzdHaaB3j6PZKrpFSKDlzxTtmaALFqNnvuakd-bB1yjsfiNr91xSAmqk589C6ZF3mXnx8i9i_NGEtItBwJ6h-auonY8jLmfKqQpC3INQbrDXq0IpbQygecA6Uyc5lR7-e6_gwSMxQuUpgs0ynYAQ0KpWMNvSza4lI8qCs4dz2NQCWqPuwnu7j3NTy5Bw_8xau5Id2VFP7PF4lqmPs8wVJOyegLUVVvxuqetEauV9UnS5mUcyvdAXRhHig73KMBsukBc0jj1orcCBi0gFq6xgWVn7a0jDQVVM"
+                }
+                }
+            </code>
+        </pre>
+        <h1>Login With Facebook</h1>
+        <p>POST : <a href="http://192.241.234.75:5000/api/v1/loginWithFacebook">http://192.241.234.75:5000/api/v1/loginWithFacebook</a><br>
+        <pre><code>Request <br>
+            {
+    "api_token" : "required"
+}</code></pre>
+        <pre><code>Response <br>
+            {
+            "id": 17,
+            "name": "Dina El Shaer",
+            "email": "dina.elshare@gmail.com",
+            "created_at": "2017-12-31 11:09:51",
+            "updated_at": "2017-12-31 11:09:51",
+            "username": "Dina El Shaer",
+            "phone": null,
+            "photo": "https://scontent.xx.fbcdn.net/v/t31.0-1/p960x960/17854715_10213116198808523_2618607121758883284_o.jpg?oh=b2e98df87d05d2e8a9dfdde8cc685d54&oe=5ABAD073",
+            "facebook_id": "10215465085489222",
+            "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImEwYmY0NzUwYjJlODE0ZjllY2ZmY2JkNzE5NWZhMzFiNGQ1Y2VjMzAzNDAyMzliZGVmNGFjNDk2N2NiODUzOTU1MGNjMDE4NzJkNzZjM2Y0In0.eyJhdWQiOiI0IiwianRpIjoiYTBiZjQ3NTBiMmU4MTRmOWVjZmZjYmQ3MTk1ZmEzMWI0ZDVjZWMzMDM0MDIzOWJkZWY0YWM0OTY3Y2I4NTM5NTUwY2MwMTg3MmQ3NmMzZjQiLCJpYXQiOjE1MTQ3Mzg0NTMsIm5iZiI6MTUxNDczODQ1MywiZXhwIjoxNTQ2Mjc0NDUzLCJzdWIiOiIxNyIsInNjb3BlcyI6W119.LJvUJDJYNkOJ1tKpVZ068Yw18PulWlQqTiGloZuyKx6NWCFxvoNKHv6vhxWwt6ykyfe_2gGB4-CAAVe1XBvkdVtuFrU9V_7WUVW2bphOAZAe_mmrzR7nNzPtJnDOGZDrM_4q6Yr6118SsPrMpzMVbGesRi_bKR7XzedGXWOAy1aDGWHWQ9_yYiAfXaiC57e7Dny2Jy5PAVoPUP7pdUKSWMc04tDtrINiKhlzZSgzmfOmrQO2rUO6Xe150gZXyvgxq0tiTXEMv61usjUBYV5ZCTLL4c_-ttL8PvGmiEB7DO59J5-YLxQZhipneDfHsRVd3ik95jPxBSrn8pxzwl_OHIdTq_MpsjN6IkexrHPxqy0JDctoRwueK74y-GRKgMVLCvJxv9myZE8N4AV_ou63Szb-RtwMkXCy3zJVlu4kx2otWl9pLGDVXGOL8cm2eLkBlXJm3mzPpl6Sq2bAPAYytM3vhkgQi3iMzvXArq9LEaDbYbqWyJLbz9wnV9x-ezsgdtzAsiKYTzTrjUtnnvwuGr1hfQKNyc-sOJNS4jK7SKIWyTNORNPt6pBbS4fsjRxS8nDca6MEKKc4tZxwFBYCoUP5-NQ7-Vu6cxnivZ-q9PQ-5UhyF9RVxoWxzFft_ss8NyrwmVYpzKFn1o6cRla12B2uMI191oaLNEQseoU5_OA"
+            }
+        </code></pre>
+
+        <h1>Register</h1>
+        <p>POST : <a href="http://192.241.234.75:5000/api/v1/register">http://192.241.234.75:5000/api/v1/register</a><br>
+            status -&gt; (true , false)<br>
+            data -&gt; array of objects will be empty if no data found<br>
+            error -&gt; error messages will be empty if no error <br></p>
+        <pre><code>Request <br>
+            {
+            "name": "noor xx",
+            "email": "xx@gmail.com",
+            "username": "xxxx",
+            "password": "123456",
+            "phone":"",
+            "photo": "iVBORw0KGgoAAAANSUhEUgAAAB4AAAAkCAYAAACe0YppAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2RpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTMyIDc5LjE1OTI4NCwgMjAxNi8wNC8xOS0xMzoxMzo0MCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo0Q0MxM0ZGNzA4MzVFNDExODc0NDgwRkQ4RDQyMEU3RCIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozODQ5NTJGNzEzMDIxMUU3QUMxN0FCQjg5Mzg3ODFENiIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozODQ5NTJGNjEzMDIxMUU3QUMxN0FCQjg5Mzg3ODFENiIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IFdpbmRvd3MiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo3RjMwNzVEODNEQTMxMUU0OEVFODlCQUNBOEU2RDk1QiIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo3RjMwNzVEOTNEQTMxMUU0OEVFODlCQUNBOEU2RDk1QiIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PrcnclcAAAKySURBVHjaYrRfdZMBCDiB2AyI1RloC0CWnQLi7yxAQhGIt9PBUmTLPZmAxDQ6WsoAtWsyyGInBvoDe5DFbANgMQ8LLhlVXlaG9z//Mbz59Zcsk0XYmBnCVfjB7KnX3mHIY7XYVJiDodFWhoGLlYlh9dU3WDXiAyD93U5yiNT0/ifDnudfUdQwYdOYrCsCthQEQrVFGOJVBUiymB/oW5TUJMiOoYaJGIMSDcTAQU8sAPnu2+9/cL44Nyt5FoNArIYQ2SmJGy0EcFr8Fcm1MGAizQtOMMSC778RiZKblYk4i++9/4EhBopzWColBpx6+gXOfvX1N3EWY4sTWEJzkeQmymJFAXbSg/ruh584Dcw0EiMpyEny8dMvv3EaIszFSlSQI6cTMWJTNXK+e/vtN0PpvkcYQR4kz4s/JSMlqK9YSj+C2ek1MJhOv/3BsP32exTxFENxooOcaB8/xxInnRdeMzz++BMllbdYSeK0TE6AA86+jyXNYLWYF8knyHG18PIbFHUaolwMMxxksFYQXEhB/YWcoEYvCtGDHGT5Wm9FkopUolI1eqkzF1hTHXrwESOl11lKwS03EOZAbeu8JzKopXkQrhdFSxig+rnu9EsMy2X52cGWE5vgCPoY5Bts1eKki28wgh1kObHFKlaLP6IlBktpHgw1IJ+DUjq65aA8DirdyKqPQfkWGYhy40446NkMFkqEyn6cqRpUYiEbZIqWYFCC/exLlIqfmGqWCV+JhQw+4Gn0gUIobtt9DJ+THMfYfA9qceIDoDhvOv4Mq+W3sdTvOJu3u+5/hMftPiCbmGbu7c+/GQoPPGHI0xcB18GwBsW6h58x1DICO23/B6BBT1qROWoxBeAvyOI7A2DxNZDFxSAX0NO3QFwDyk6bgNgciKNA3UcaWwpqbC8D4rMAAQYANs/vbwMoB0oAAAAASUVORK5CYII="
+            }
+        </code></pre>
+        <pre><code>Response <br>
+            {
+            "success": {
+            "name": "noor xx",
+            "email": "xx@gmail.com",
+            "username": "xxxx",
+            "phone": null,
+            "photo": "http://192.241.234.75:5000/upload/media/images/foodimage1514380498.jpg",
+            "updated_at": "2017-12-27 13:14:58",
+            "created_at": "2017-12-27 13:14:58",
+            "id": 10,
+            "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImM1OTBjZjUxZjU5YmY0NzA3MGQ1ODg2NTkzZWMxMjI4YzA2M2QyMDViY2VlZDJhMzBlZmRiYzlhMzI1MWE0NWViYmZlYTdmNjFkZDNmMDljIn0.eyJhdWQiOiIzIiwianRpIjoiYzU5MGNmNTFmNTliZjQ3MDcwZDU4ODY1OTNlYzEyMjhjMDYzZDIwNWJjZWVkMmEzMGVmZGJjOWEzMjUxYTQ1ZWJiZmVhN2Y2MWRkM2YwOWMiLCJpYXQiOjE1MTQzODA0OTgsIm5iZiI6MTUxNDM4MDQ5OCwiZXhwIjoxNTQ1OTE2NDk4LCJzdWIiOiIxMCIsInNjb3BlcyI6W119.LOY3aMq_MIMSOqJ2v2jLe20pa6B298ultAZ003D2hbx_WmAv58J1IesAxPmsfby8fxCCsyicDdQsFQeIIUIyCdjVhgFBk07aFi5Te-SpxQDQTkm4e8JBo-26iuFNCK4CrmPDoJyYI30qFZ9DE9MA8pJMW8MU0fbfYTQ6MMv1AOSUPn38q0wDScpHYdI9XSa0GKRjOSZDlFQniDpPYFtCyjc5SyHM8y04zir9se0DSPh2mvOiQXCI4gmVYKNy7GlBDnSd9_aVFe8CmOMxT6j03sRZsuBR2Yv_uhB7zbw91cMf_qbBm-99pAhdnO76BBLwNFAJKB5yOwSwd_0hu5xLuDyTZMK7kdjHs8aY2CM0Jwhw536dAnLA7oVoiwvJh8va7iQdfgSpJmHwTfTyM2THY7TKYePGmByOrCLfJhRdkZUtu-3GlG5fsX12gBQkjmd4sKEs30qWycxRkKscGFWDdPs3WF1QBMUfdcf8aFfbTflGGaBqgNTssJprNsLFIqBSX_HWeBVnVKCwR03skjZMz3TYKVhV9nE8LipZLCaTGGNk6YWGVgXf1OXoJSo8Rz69MydH8uyZdmLK9bLv1jCE-g3r_6Thua3tfdPeSKLtRU2WLxhhAm9pZIXAylAkmagcSY5mZJGqRX4K-tkJu4VhhHucXPSRI70PQ79ktjM-byA"
+            }
+            }
+}</code></pre>
+<!-- reset password -->
+<h1>Reset Password Mail</h1>
+        <p>POST : <a href="http://192.241.234.75:5000/api/v1/password/email">http://192.241.234.75:5000/api/v1/password/email</a><br>
+            status -&gt; (true , false)<br>
+            data -&gt; it return token<br>
+            error -&gt; error messages will be "user not found" if user not found} <br></p>
+        <pre><code>Request <br>
+            {
+           "email": "ahmedsalem994.as@gmail.com",
+        }
+        </code></pre>
+        <pre><code>Response <br>
+            {
+                 "token": "1ac83aae63ffd8dfd6023c3f0353c0e14ffed2aa281770b5ec029f94f9dd9d79"
+            }
+}</code></pre>
+
+<!-- end of reset password -->
+
+<!-- reset password -->
+<h1>Reset Password</h1>
+        <p>POST : <a href="http://192.241.234.75:5000/api/v1/password/reset">http://192.241.234.75:5000/api/v1/password/reset</a><br>
+            status -&gt; (true , false)<br>
+            data -&gt; it return daata null message "Your password has been reset!"<br>
+            error -&gt; error messages will be array of errors  <br></p>
+        <pre><code>Request <br>
+           {
+              "token":"6daf893cfc9e5050d0cd4a3gfdgdfb53969d7d47c83e4d0930dff0198e15b56ca86e58",
+              "email": "ahmedsalem994.as@gmail.com",
+              "password": "12345678",
+            }
+        </code></pre>
+        <pre><code>Response <br>
+            {
+                "data": null,
+                "message": "Your password has been reset!"
+            }
+}</code></pre>
+<!-- reset password -->
+<!--update profile-->
+        <h1>updateProfile</h1>
+        <p>POST : <a href="http://192.241.234.75:5000/api/v1/updateProfile">http://192.241.234.75:5000/api/v1/updateProfile</a>
+            <br>
+            status -&gt; (true , false)<br>
+            data -&gt; object<br>
+        </p>
+        <pre>
+            <code>
+                Request <br>
+                {
+                "id":1,
+                "name": "Ahmed salem",
+                "password": "",
+                "phone":"",
+                "photo": ""
+                }
+            </code>
+        </pre>
+        <pre>
+            <code>
+                Response
+                <br>
+                {
+                "user": {
+                "id": 1,
+                "name": "salem",
+                "email": "ahmedsalem994.as@gmail.com",
+                "created_at": 2017-12-27 17:49:13,
+                "updated_at": "2017-12-27 17:49:13",
+                "username": "salem",
+                "phone": "012333",
+                "photo": "",
+                "facebook_id": null,
+                "api_token": "",
+                "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImM4ZTAwZmZmNDhmZDc3YzM0ZmMwZDllMThhOGI0NjQzNWIxMDg1ZDViOWViOTIwOTMyYzM0ZjI1YWYyZDkyYzM1YzIwOTgwN2RkOGUwOWEzIn0.eyJhdWQiOiI0IiwianRpIjoiYzhlMDBmZmY0OGZkNzdjMzRmYzBkOWUxOGE4YjQ2NDM1YjEwODVkNWI5ZWI5MjA5MzJjMzRmMjVhZjJkOTJjMzVjMjA5ODA3ZGQ4ZTA5YTMiLCJpYXQiOjE1MTQzOTY5OTYsIm5iZiI6MTUxNDM5Njk5NiwiZXhwIjoxNTQ1OTMyOTk2LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.nv3HY2xTA_0UodO6bQhcZe1go4CwOLQGqJ9ejfSn9v2G8-pbPTPCPTnYCOG3ejV9ot8907XiJ86zFxlLUuKpVpaZ-gL6-oLs3XfSkR3rf6PKj413LYx4puU1PC36Hvj9_Mr8FnnSoVyCcB5BGR-Eyl4-pNy7fDhiAf980Ezao1M2OWU3_0928mZVtFOqR6vmVLWIP29QI0eH36H-Xg3eoqGkqn_MxZxJHn6ffTj9JHV302i8H104xr9EePZlJ4vAtr26Colb0O60jrGdtXhJY4RgapqGgnP3hk8J5WUzeci-Ckt03hYy8tPZoJY8NKkBHcsMrTDe50TI-MwNKrmvp6fwl_cftWRA7Zh1_C9boU_vxBuyrBMvthK_wvorACQV4IIEFboloZJQzdHaaB3j6PZKrpFSKDlzxTtmaALFqNnvuakd-bB1yjsfiNr91xSAmqk589C6ZF3mXnx8i9i_NGEtItBwJ6h-auonY8jLmfKqQpC3INQbrDXq0IpbQygecA6Uyc5lR7-e6_gwSMxQuUpgs0ynYAQ0KpWMNvSza4lI8qCs4dz2NQCWqPuwnu7j3NTy5Bw_8xau5Id2VFP7PF4lqmPs8wVJOyegLUVVvxuqetEauV9UnS5mUcyvdAXRhHig73KMBsukBc0jj1orcCBi0gFq6xgWVn7a0jDQVVM"
+                }
+                }
+            </code>
+        </pre>
+<!--endof update profile-->
+<!-- fresh product -->
+<h1>fresh product </h1>
+        <p>Post : <a href="http://192.241.234.75:5000/api/v1/product/paginat">http://192.241.234.75:5000/api/v1/product/paginat</a><br>
+            status -&gt; (true , false)<br>
+            data -&gt; it return products<br>
+            error -&gt; <br></p>
+             <pre><code>Request <br>
+                 {
+                 "limit":10,
+                 "offset":0,
+                 "featured":true
+                 }
+
+        </code></pre>
+        
+        <pre><code>Response <br>
+            {
+            "product": [
+            {
+            "id": 12,
+            "name": "بوتجاز",
+            "model_number": 1234,
+            "model_year": 2018,
+            "description": "بروفيشنال",
+            "long_description": "عدد الشعلات 5 .\r\nامان كامل مع غرف احتراق تصميم ايطالى .\r\nشاشه ديجيتال .\r\nثيرموستات .\r\nمروحة لتوزيع الحرارة داخل الفرن .\r\nاشعال ذاتى .\r\nحوامل زهر لتوفير ثبات اكبر للانية .\r\nمفتاح منفصل لتشغيل الشوايه .\r\nالفرن والشوايه يعملان معا والباب مغلق لمدة 10 دقائق .\r\nشواية بالموتور .\r\nلمبة اضاءة داخلية للفرن .\r\nتايمر 60 دقيقة للتنبية بانتهاء عملية الطهى .\r\nدرج تسخين اسفل الفرن للاحتفاظ بالحرارة اطول فترة ممكنه .\r\nباب الفرن Full glass .",
+            "price": 9000,
+            "image": "http://192.241.234.75:5000/uploads/freshproduct/image/GC-v2-1400x700.jpg",
+            "featured": 1
+            },
+            {
+            "id": 13,
+            "name": "ثلاجة",
+            "model_number": 12345,
+            "model_year": 2018,
+            "description": "ثلاجة  نو فروست",
+            "long_description": "إضاءة داخلية LED أكثر سطوعا\r\nتستخدم طاقة أقل\r\nتيارات الهواء البارد داخل الثلاجة\r\nأرفف من الزجاج مقاوم للكسر\r\nدرج خضروات كبير بموازن الرطوبة يحافظ على نضارة الخضروات\r\nشاشة تحكم ديجيتال باللمس\r\nتجميد سريع\r\nتبريد سريع\r\nالسعة اللترية : 480 لتر\r\nالسعة اللترية للفريزر : 116 لتر\r\nالسعة اللترية للثلاجة : 364 لتر\r\nالأبعاد (بـ الباب) عرض* ارتفاع *عمق (مم): 790*1756 *735\r\nاللون :إستانلس",
+            "price": 8000,
+            "image": "http://192.241.234.75:5000/uploads/freshproduct/image/fresh-Refrigerators-1516-1400x663.jpg",
+            "featured": 1
+            },
+            {
+            "id": 14,
+            "name": "سخان",
+            "model_number": 4545,
+            "model_year": 2018,
+            "description": "سخان كهرباء فريش كنترول",
+            "long_description": "شاشة رقمية وريموت كنترول للتحكم في درجات الحرارة وعرض درجة الحرارة الفعلية داخل السخان .\r\nطبقة بوليوريثان عازلة للحرارة والتي تمنع فقد الحرارة وتوفر في استهلاك الكهرباء حتى 25% .\r\nمغطى من الداخل بطبقة من المينا تحميه من التآكل .\r\nعامود ماغنيسيوم لحمايته من التآكل .\r\nوحدة التسخين مركبة على فلاشة مثبتة بخمسة مسامير لتسهيل عملية الصيانة والتنظيف .\r\nمزود بصمام أمان لتنفيس الضغط الزائد عن السخان .\r\nمتوفر بسعات :30-40-50 لتر .\r\nمكونات أوروبية .\r\n1500 وات/50-60 هرتز/220-240 فولت .",
+            "price": 12000,
+            "image": "http://192.241.234.75:5000/uploads/freshproduct/image/hetrar-control-fresh-1-1400x700.jpg",
+            "featured": 1
+            }
+            ]
+            }
+        </code></pre>
+
+<!-- end of fresh product -->
+
+
+
+        <!-- fresh product -->
+        <h1>search for fresh product </h1>
+        <p>Post : <a href="http://192.241.234.75:5000/api/v1/product/search">http://192.241.234.75:5000/api/v1/product/search</a><br>
+            status -&gt; (true , false)<br>
+            data -&gt; it return products<br>
+            error -&gt; <br></p>
+             <pre><code>Request <br>
+                 {
+                 "name":"fresh"
+                 }
+
+             </code></pre>
+
+        <pre><code>Response <br>
+            {
+            "product": [
+            {
+            "id": 1,
+            "name": "freshproduct",
+            "model_number": 10,
+            "model_year": 2017,
+            "description": "my product",
+            "long_description": "my product my product my productmy product",
+            "price": 200,
+            "image": "http://192.241.234.75:5000/uploads/freshproduct/imageaddemployee.png"
+            },
+            {
+            "id": 2,
+            "name": "freshproduct2",
+            "model_number": 10,
+            "model_year": 2017,
+            "description": "my product2",
+            "long_description": "my product my product my productmy product",
+            "price": 200,
+            "image": "http://192.241.234.75:5000/uploads/freshproduct/imageaddemployee.png"
+            }
+            ]
+            }
+        </code></pre>
+
+        <!-- end of fresh product -->
+
+
+<!-- fresh Units -->
+<h1>Units </h1>
+        <p>Get : <a href="http://192.241.234.75:5000/api/v1/units">http://192.241.234.75:5000/api/v1/units</a><br>
+            status -&gt; (true , false)<br>
+            data -&gt; it return list of all units<br>
+            error -&gt; <br></p>
+        
+        <pre><code>Response <br>
+        {
+"data": [
+{
+"id": 1,
+"name": "kg",
+"created_at": "2017-12-19 19:12:44",
+"updated_at": "2017-12-20 12:46:49"
+},
+{
+"id": 2,
+"name": "mm",
+"created_at": "2017-12-20 12:44:34",
+"updated_at": "2017-12-20 12:44:34"
+}
+]
+}
+           
+        </code></pre>
+
+<!-- end of units -->
+
+
+
+        <h1>Categories</h1>
+        <p>GET : <a href="http://192.241.234.75:5000/api/v1/categories">http://192.241.234.75:5000/api/v1/categories</a><br>
+            status -&gt; (true , false)<br>
+            categories -&gt; array of objects will be returne <br>
+         </p>
+       
+        <pre><code>Response <br>
+          {
+"categories": [
+{
+"id": 9,
+"name": "test_sub",
+"description": "test_sub",
+"parent_id": 0,
+"cover": "http://192.241.234.75:5000/categories/cover/addemployee.png",
+"featured": "yes",
+"created_at": "2017-12-17 13:50:09",
+"updated_at": "2017-12-17 13:50:09",
+"sub": [
+{
+"id": 13,
+"name": "sub category",
+"description": "sub category",
+"parent_id": 9,
+"cover": "ta3een.png",
+"featured": "yes",
+"created_at": "2017-12-18 18:14:49",
+"updated_at": "2017-12-18 18:14:49"
+}
+]
+},
+{
+"id": 10,
+"name": "test",
+"description": "test",
+"parent_id": 0,
+"cover": "http://192.241.234.75:5000/Nerve-logo.png",
+"featured": "yes",
+"created_at": "2017-12-17 20:22:04",
+"updated_at": "2017-12-17 20:22:04",
+"sub": []
+},
+{
+"id": 11,
+"name": "main category",
+"description": "main category",
+"parent_id": 0,
+"cover": "http://192.241.234.75:5000/ta3een.png",
+"featured": "yes",
+"created_at": "2017-12-18 18:14:49",
+"updated_at": "2017-12-18 18:14:49",
+"sub": []
+}
+]
+}
+           </code></pre>
+
+
+<!-- fresh Foods -->
+<h1>list Of Recipe </h1>
+        <p>Post : <a href="http://192.241.234.75:5000/api/v1/recipes">http://192.241.234.75:5000/api/v1/recipes</a><br>
+            status -&gt; (true , false)<br>
+            data -&gt; it return list of all recipes<br>
+            <br></p>
+            <pre>
+            <code>
+                Request <br>
+
+                {
+                "user_id":1,
+                "featured":true,
+                "offset":0,
+                "limit":10
+                }
+
+            </code>
+        </pre>
+
+        
+        <pre><code>Response <br>
+        {
+        "recipes": [
+        {
+        "id": 16,
+        "name": "تورتة  خضار",
+        "prepare_time": 18,
+        "cooking_time": 30,
+        "servingperson": 5,
+        "chefnotes": "يجبوضعالعسلوهوساخنعليالبسبوسةعنداخراجهامنالفرن",
+        "steps": [
+        "اضفالبسبوسةوعليهاالبيكنجبودر",
+        "اضفالزباديعليالدقيق"
+        ],
+        "tags": [
+        "غداء"
+        ],
+        "status": 0,
+        "created_at": "2018-01-14 10:35:04",
+        "created_by": {
+        "username": "salem",
+        "id": 1
+        },
+        "category": {
+        "id": 16,
+        "name": "الحلويات",
+        "description": "وصفات الحلويات",
+        "parent_id": 0,
+        "cover": "http://192.241.234.75:5000/categories/cover/recipe-image-legacy-id--488691_11.jpg",
+        "featured": 1,
+        "created_at": "2017-12-19 06:24:11",
+        "updated_at": "2017-12-19 06:24:11"
+        },
+        "sub_category": {
+        "id": 24,
+        "name": "تورتات",
+        "description": "تيست",
+        "parent_id": 16,
+        "cover": "http://192.241.234.75:5000/categories/coverrecipe-image-legacy-id--488691_11.jpg",
+        "featured": 0,
+        "created_at": "2017-12-24 02:54:53",
+        "updated_at": "2017-12-24 02:54:53"
+        },
+        "featured": 0,
+        "media": [
+        {
+        "link": "http://192.241.234.75:5000/upload/media/images/foodimage1515926104.jpg",
+        "type": "image"
+        }
+        ],
+        "ingradient": [
+        {
+        "item": {
+        "id": 1,
+        "name": "طماطم",
+        "item_category_id": 1,
+        "created_at": "2017-12-31 05:10:15",
+        "updated_at": "2017-12-31 05:15:26",
+        "category": {
+        "id": 1,
+        "name": "خضروات",
+        "photo": "http://192.241.234.75:5000/categories/cover/logo.png",
+        "created_at": "2017-12-31 04:50:28",
+        "updated_at": "2017-12-31 04:58:28"
+        }
+        },
+        "unit": "kg",
+        "number": 0.5
+        },
+        {
+        "item": {
+        "id": 2,
+        "name": "فلفل",
+        "item_category_id": 1,
+        "created_at": "2017-12-31 05:44:13",
+        "updated_at": "2017-12-31 06:04:17",
+        "category": {
+        "id": 1,
+        "name": "خضروات",
+        "photo": "http://192.241.234.75:5000/categories/cover/logo.png",
+        "created_at": "2017-12-31 04:50:28",
+        "updated_at": "2017-12-31 04:58:28"
+        }
+        },
+        "unit": "kg",
+        "number": 1
+        }
+        ],
+        "comments": [],
+        "rate": 0,
+        "favorite": false
+        },
+        {
+        "id": 14,
+        "name": "بسبوسة",
+        "prepare_time": 10,
+        "cooking_time": 30,
+        "servingperson": 5,
+        "chefnotes": "يجب وضع العسل وهو ساخن علي البسبوسة عند اخراجها من الفرن",
+        "steps": [
+        "اضف البسبوسة وعليها البيكنج بودر",
+        "اضف الزبادي علي الدقيق"
+        ],
+        "tags": [
+        "بسبوسة",
+        "حلويات",
+        "شرقية"
+        ],
+        "status": 1,
+        "created_at": "2017-12-24 08:58:09",
+        "created_by": {
+        "username": "بواسطة فرش",
+        "id": 0
+        },
+        "category": {
+        "id": 16,
+        "name": "الحلويات",
+        "description": "وصفات الحلويات",
+        "parent_id": 0,
+        "cover": "http://192.241.234.75:5000/categories/cover/recipe-image-legacy-id--488691_11.jpg",
+        "featured": 1,
+        "created_at": "2017-12-19 06:24:11",
+        "updated_at": "2017-12-19 06:24:11"
+        },
+        "sub_category": {
+        "id": 24,
+        "name": "تورتات",
+        "description": "تيست",
+        "parent_id": 16,
+        "cover": "http://192.241.234.75:5000/categories/coverrecipe-image-legacy-id--488691_11.jpg",
+        "featured": 0,
+        "created_at": "2017-12-24 02:54:53",
+        "updated_at": "2017-12-24 02:54:53"
+        },
+        "featured": 1,
+        "media": [
+        {
+        "link": "https://www.youtube.com/watch?v=ggheOHTOUPY",
+        "type": "youtube"
+        },
+        {
+        "link": "http://192.241.234.75:5000/upload/media/image/14/Basbousa.png",
+        "type": "image"
+        },
+        {
+        "link": "http://192.241.234.75:5000/upload/media/image/14/YYYYY_YYY_YYYYYY_YYYY_875447_highres.jpg",
+        "type": "image"
+        },
+        {
+        "link": "http://192.241.234.75:5000/upload/media/image/14/5406831f54a31ac91a0188515ea1740d35b38cf8.jpg",
+        "type": "image"
+        }
+        ],
+        "ingradient": [
+        {
+        "item": {
+        "id": 4,
+        "name": "دقيق بسبوسة",
+        "item_category_id": 6,
+        "created_at": "2018-01-01 14:01:02",
+        "updated_at": "2018-01-01 14:01:02",
+        "category": {
+        "id": 6,
+        "name": "حبوب",
+        "photo": "http://192.241.234.75:5000/categories/cover/logo.png",
+        "created_at": "2018-01-01 14:00:13",
+        "updated_at": "2018-01-01 14:00:13"
+        }
+        },
+        "unit": "kg",
+        "number": 0.5
+        },
+        {
+        "item": {
+        "id": 5,
+        "name": "زبادي",
+        "item_category_id": 4,
+        "created_at": "2018-01-01 14:01:20",
+        "updated_at": "2018-01-01 14:01:20",
+        "category": {
+        "id": 4,
+        "name": "البان",
+        "photo": "http://192.241.234.75:5000/categories/cover/logo.png",
+        "created_at": "2018-01-01 13:59:20",
+        "updated_at": "2018-01-01 13:59:20"
+        }
+        },
+        "unit": "kg",
+        "number": 1
+        }
+        ],
+        "comments": [],
+        "rate": 0,
+        "favorite": false
+        },
+        {
+        "id": 13,
+        "name": "بسبوسة",
+        "prepare_time": 10,
+        "cooking_time": 30,
+        "servingperson": 4,
+        "chefnotes": "يجب وضع العسل وهو سخن عند اخراج البسبوسة من الفرن",
+        "steps": [
+        "اضف البسبوسة  والبيكنج بودر",
+        "اضافة كوب الزبادي",
+        "يسخن السكر والماء لمدة 10 دقائق"
+        ],
+        "tags": [
+        "بسبوسة",
+        "حلويات",
+        "شرقية"
+        ],
+        "status": 1,
+        "created_at": "2017-12-24 08:09:10",
+        "created_by": {
+        "username": "بواسطة فرش",
+        "id": 0
+        },
+        "category": {
+        "id": 16,
+        "name": "الحلويات",
+        "description": "وصفات الحلويات",
+        "parent_id": 0,
+        "cover": "http://192.241.234.75:5000/categories/cover/recipe-image-legacy-id--488691_11.jpg",
+        "featured": 1,
+        "created_at": "2017-12-19 06:24:11",
+        "updated_at": "2017-12-19 06:24:11"
+        },
+        "sub_category": {
+        "id": 24,
+        "name": "تورتات",
+        "description": "تيست",
+        "parent_id": 16,
+        "cover": "http://192.241.234.75:5000/categories/coverrecipe-image-legacy-id--488691_11.jpg",
+        "featured": 0,
+        "created_at": "2017-12-24 02:54:53",
+        "updated_at": "2017-12-24 02:54:53"
+        },
+        "featured": 0,
+        "media": [
+        {
+        "link": "https://www.youtube.com/watch?v=ggheOHTOUPY",
+        "type": "youtube"
+        }
+        ],
+        "ingradient": [
+        {
+        "item": {
+        "id": 4,
+        "name": "دقيق بسبوسة",
+        "item_category_id": 6,
+        "created_at": "2018-01-01 14:01:02",
+        "updated_at": "2018-01-01 14:01:02",
+        "category": {
+        "id": 6,
+        "name": "حبوب",
+        "photo": "http://192.241.234.75:5000/categories/cover/logo.png",
+        "created_at": "2018-01-01 14:00:13",
+        "updated_at": "2018-01-01 14:00:13"
+        }
+        },
+        "unit": "kg",
+        "number": 1
+        },
+        {
+        "item": {
+        "id": 5,
+        "name": "زبادي",
+        "item_category_id": 4,
+        "created_at": "2018-01-01 14:01:20",
+        "updated_at": "2018-01-01 14:01:20",
+        "category": {
+        "id": 4,
+        "name": "البان",
+        "photo": "http://192.241.234.75:5000/categories/cover/logo.png",
+        "created_at": "2018-01-01 13:59:20",
+        "updated_at": "2018-01-01 13:59:20"
+        }
+        },
+        "unit": "kg",
+        "number": 1
+        },
+        {
+        "item": {
+        "id": 6,
+        "name": "سكر",
+        "item_category_id": 5,
+        "created_at": "2018-01-01 14:01:41",
+        "updated_at": "2018-01-01 14:01:41",
+        "category": {
+        "id": 5,
+        "name": "سكريات",
+        "photo": "http://192.241.234.75:5000/categories/cover/logo.png",
+        "created_at": "2018-01-01 13:59:39",
+        "updated_at": "2018-01-01 13:59:39"
+        }
+        },
+        "unit": "kg",
+        "number": 0.6
+        }
+        ],
+        "comments": [
+        {
+        "user": {
+        "id": 1,
+        "name": "Ahmed salem",
+        "email": "ahmedsalem994.as@gmail.com",
+        "created_at": null,
+        "updated_at": "2018-01-14 11:51:33",
+        "username": "salem",
+        "phone": "012333",
+        "photo": "http://192.241.234.75:5000/upload/media/images/foodimage1515930693.jpg",
+        "facebook_id": null
+        },
+        "body": "my comment",
+        "rate": 5
+        },
+        {
+        "user": {
+        "id": 1,
+        "name": "Ahmed salem",
+        "email": "ahmedsalem994.as@gmail.com",
+        "created_at": null,
+        "updated_at": "2018-01-14 11:51:33",
+        "username": "salem",
+        "phone": "012333",
+        "photo": "http://192.241.234.75:5000/upload/media/images/foodimage1515930693.jpg",
+        "facebook_id": null
+        },
+        "body": "salem comment",
+        "rate": 5
+        }
+        ],
+        "rate": 5,
+        "favorite": true
+        }
+        ]
+        }
+        </code></pre>
+
+<!-- end of Foods -->
+
+<!-- post food -->
+<h1>Add New Recipe</h1>
+        <p>POST : <a href="http://192.241.234.75:5000/api/v1/add/recipe">http://192.241.234.75:5000/api/v1/add/recipe</a><br>
+            status -&gt; (true , false)<br>
+            data -&gt; it return recipe<br>
+            error -&gt;  "message": "The given data was invalid.","errors":{} <br></p>
+            <pre><code>Header <br>
+            {"Authorization": "Bearer yourtoken"}
+            </code>
+            </pre>
+        <pre><code>Request <br>
+          {
+    "user_id":1,
+    "name":"مكرونة ",
+    "prepare_time": 16,
+    "cooking_time": 30,
+    "servingperson":5,
+    "chefnotes":"يجبوضعالعسلوهوساخنعليالبسبوسةعنداخراجهامنالفرن",
+    "steps":["اضفالبسبوسةوعليهاالبيكنجبودر","اضفالزباديعليالدقيق"],
+    "category_id":16,
+    "subcategory_id":24,
+    "media":["iVBORw0KGgoAAAANSUhEUgAAAB4AAAAkCAYAAACe0YppAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2RpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTMyIDc5LjE1OTI4NCwgMjAxNi8wNC8xOS0xMzoxMzo0MCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo0Q0MxM0ZGNzA4MzVFNDExODc0NDgwRkQ4RDQyMEU3RCIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozODQ5NTJGNzEzMDIxMUU3QUMxN0FCQjg5Mzg3ODFENiIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozODQ5NTJGNjEzMDIxMUU3QUMxN0FCQjg5Mzg3ODFENiIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IFdpbmRvd3MiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo3RjMwNzVEODNEQTMxMUU0OEVFODlCQUNBOEU2RDk1QiIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo3RjMwNzVEOTNEQTMxMUU0OEVFODlCQUNBOEU2RDk1QiIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PrcnclcAAAKySURBVHjaYrRfdZMBCDiB2AyI1RloC0CWnQLi7yxAQhGIt9PBUmTLPZmAxDQ6WsoAtWsyyGInBvoDe5DFbANgMQ8LLhlVXlaG9z//Mbz59Zcsk0XYmBnCVfjB7KnX3mHIY7XYVJiDodFWhoGLlYlh9dU3WDXiAyD93U5yiNT0/ifDnudfUdQwYdOYrCsCthQEQrVFGOJVBUiymB/oW5TUJMiOoYaJGIMSDcTAQU8sAPnu2+9/cL44Nyt5FoNArIYQ2SmJGy0EcFr8Fcm1MGAizQtOMMSC778RiZKblYk4i++9/4EhBopzWColBpx6+gXOfvX1N3EWY4sTWEJzkeQmymJFAXbSg/ruh584Dcw0EiMpyEny8dMvv3EaIszFSlSQI6cTMWJTNXK+e/vtN0PpvkcYQR4kz4s/JSMlqK9YSj+C2ek1MJhOv/3BsP32exTxFENxooOcaB8/xxInnRdeMzz++BMllbdYSeK0TE6AA86+jyXNYLWYF8knyHG18PIbFHUaolwMMxxksFYQXEhB/YWcoEYvCtGDHGT5Wm9FkopUolI1eqkzF1hTHXrwESOl11lKwS03EOZAbeu8JzKopXkQrhdFSxig+rnu9EsMy2X52cGWE5vgCPoY5Bts1eKki28wgh1kObHFKlaLP6IlBktpHgw1IJ+DUjq65aA8DirdyKqPQfkWGYhy40446NkMFkqEyn6cqRpUYiEbZIqWYFCC/exLlIqfmGqWCV+JhQw+4Gn0gUIobtt9DJ+THMfYfA9qceIDoDhvOv4Mq+W3sdTvOJu3u+5/hMftPiCbmGbu7c+/GQoPPGHI0xcB18GwBsW6h58x1DICO23/B6BBT1qROWoxBeAvyOI7A2DxNZDFxSAX0NO3QFwDyk6bgNgciKNA3UcaWwpqbC8D4rMAAQYANs/vbwMoB0oAAAAASUVORK5CYII="],
+    "youttublink":["https://www.youtube.com/salem","https://www.youtube.com/salem"],
+    "ingradient":
+    [
+        {
+            "item_id":1,
+            "unit":"kg",
+            "number":0.5
+        },
+        {
+            "item_id":2,
+            "unit":"kg",
+            "number":1
+        }
+    ]
+    
+}
+        </code></pre>
+        <pre><code>Response <br>
+      {
+    "recipe": {
+        "id": 31,
+        "name": "مكرونة",
+        "prepare_time": 16,
+        "cooking_time": 30,
+        "servingperson": 5,
+        "chefnotes": "يجبوضعالعسلوهوساخنعليالبسبوسةعنداخراجهامنالفرن",
+        "steps": [
+            "اضفالبسبوسةوعليهاالبيكنجبودر",
+            "اضفالزباديعليالدقيق"
+        ],
+        "tags": [],
+        "status": 0,
+        "created_at": "2018-01-14 10:12:53",
+        "created_by": {
+            "username": "salem",
+            "id": 1
+        },
+        "category": {
+            "id": 9,
+            "name": "test_sub",
+            "description": "test_sub",
+            "parent_id": 0,
+            "cover": "categories/cover/addemployee.png",
+            "featured": "yes",
+            "created_at": "2017-12-17 13:50:09",
+            "updated_at": "2017-12-17 13:50:09"
+        },
+        "sub_category": {
+            "id": 10,
+            "name": "test",
+            "description": "test",
+            "parent_id": 14,
+            "cover": "Nerve-logo.png",
+            "featured": "yes",
+            "created_at": "2017-12-17 20:22:04",
+            "updated_at": "2017-12-17 20:22:04"
+        },
+        "featured": 0,
+        "media": [
+            {
+                "link": "http://192.241.234.75:5000/upload/media/images/foodimage1515924773.jpg",
+                "type": "image"
+            }
+        ],
+        "ingradient": [
+            {
+                "item": {
+                    "id": 1,
+                    "name": "طماطم",
+                    "item_category_id": 1,
+                    "created_at": "2017-12-31 12:10:15",
+                    "updated_at": "2017-12-31 12:15:26"
+                },
+                "unit": "kg",
+                "number": 0.5
+            },
+            {
+                "item": {
+                    "id": 2,
+                    "name": "فلفل",
+                    "item_category_id": 1,
+                    "created_at": "2017-12-31 12:44:13",
+                    "updated_at": "2017-12-31 13:04:17"
+                },
+                "unit": "kg",
+                "number": 1
+            }
+        ],
+        "comments": [],
+        "rate": 0,
+        "favorite": false
+    }
+}
+        </code></pre>
+
+<!-- end of post food -->
+
+<!-- post food -->
+<h1>Edit Recipe</h1>
+        <p>POST : <a href="http://192.241.234.75:5000/api/v1/update/recipe">http://192.241.234.75:5000/api/v1/update/recipe</a><br>
+            status -&gt; (true , false)<br>
+            data -&gt; it return recipe<br>
+            error -&gt;  "message": "The given data was invalid.","errors":{} <br></p>
+            <pre><code>Header <br>
+            {"Authorization": "Bearer yourtoken"}
+            </code>
+            </pre>
+        <pre><code>Request <br>
+          {
+    "recipe_id":23,
+    "user_id":1,
+    "name":"مكرونة ==== فشخ ",
+     "prepare_time": 16,
+     "cooking_time": 30,
+    "servingperson":5,
+    "chefnotes":"يجبوضعالعسلوهوساخنعليالبسبوسةعنداخراجهامنالفرن",
+    "steps":["اضفالبسبوسةوعليهاالبيكنجبودر","اضفالزباديعليالدقيق"],
+    "category_id":9,
+    "subcategory_id":10,
+    "media":["iVBORw0KGgoAAAANSUhEUgAAAB4AAAAkCAYAAACe0YppAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2RpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTMyIDc5LjE1OTI4NCwgMjAxNi8wNC8xOS0xMzoxMzo0MCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo0Q0MxM0ZGNzA4MzVFNDExODc0NDgwRkQ4RDQyMEU3RCIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozODQ5NTJGNzEzMDIxMUU3QUMxN0FCQjg5Mzg3ODFENiIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozODQ5NTJGNjEzMDIxMUU3QUMxN0FCQjg5Mzg3ODFENiIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IFdpbmRvd3MiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo3RjMwNzVEODNEQTMxMUU0OEVFODlCQUNBOEU2RDk1QiIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo3RjMwNzVEOTNEQTMxMUU0OEVFODlCQUNBOEU2RDk1QiIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PrcnclcAAAKySURBVHjaYrRfdZMBCDiB2AyI1RloC0CWnQLi7yxAQhGIt9PBUmTLPZmAxDQ6WsoAtWsyyGInBvoDe5DFbANgMQ8LLhlVXlaG9z//Mbz59Zcsk0XYmBnCVfjB7KnX3mHIY7XYVJiDodFWhoGLlYlh9dU3WDXiAyD93U5yiNT0/ifDnudfUdQwYdOYrCsCthQEQrVFGOJVBUiymB/oW5TUJMiOoYaJGIMSDcTAQU8sAPnu2+9/cL44Nyt5FoNArIYQ2SmJGy0EcFr8Fcm1MGAizQtOMMSC778RiZKblYk4i++9/4EhBopzWColBpx6+gXOfvX1N3EWY4sTWEJzkeQmymJFAXbSg/ruh584Dcw0EiMpyEny8dMvv3EaIszFSlSQI6cTMWJTNXK+e/vtN0PpvkcYQR4kz4s/JSMlqK9YSj+C2ek1MJhOv/3BsP32exTxFENxooOcaB8/xxInnRdeMzz++BMllbdYSeK0TE6AA86+jyXNYLWYF8knyHG18PIbFHUaolwMMxxksFYQXEhB/YWcoEYvCtGDHGT5Wm9FkopUolI1eqkzF1hTHXrwESOl11lKwS03EOZAbeu8JzKopXkQrhdFSxig+rnu9EsMy2X52cGWE5vgCPoY5Bts1eKki28wgh1kObHFKlaLP6IlBktpHgw1IJ+DUjq65aA8DirdyKqPQfkWGYhy40446NkMFkqEyn6cqRpUYiEbZIqWYFCC/exLlIqfmGqWCV+JhQw+4Gn0gUIobtt9DJ+THMfYfA9qceIDoDhvOv4Mq+W3sdTvOJu3u+5/hMftPiCbmGbu7c+/GQoPPGHI0xcB18GwBsW6h58x1DICO23/B6BBT1qROWoxBeAvyOI7A2DxNZDFxSAX0NO3QFwDyk6bgNgciKNA3UcaWwpqbC8D4rMAAQYANs/vbwMoB0oAAAAASUVORK5CYII="],
+    "ingradient":
+    [
+        {
+            "item_id":1,
+            "unit":"kg",
+            "number":0.5
+        },
+        {
+            "item_id":2,
+            "unit":"kg",
+            "number":1
+        },
+        {
+            "item_id":2,
+            "unit":"kg",
+            "number":15
+        }
+    ]
+    
+}
+        </code></pre>
+        <pre><code>Response <br>
+       {
+    "recipe": {
+        "id": 23,
+        "name": "مكرونة ==== فشخ",
+        "prepare_time": 16,
+        "cooking_time": 30,
+        "servingperson": 5,
+        "chefnotes": "يجبوضعالعسلوهوساخنعليالبسبوسةعنداخراجهامنالفرن",
+        "steps": [
+            "اضفالبسبوسةوعليهاالبيكنجبودر",
+            "اضفالزباديعليالدقيق"
+        ],
+        "tags": [
+            "فطار"
+        ],
+        "status": 1,
+        "created_at": "2018-01-01 11:29:53",
+        "created_by": {
+            "username": "salem",
+            "id": 1
+        },
+        "category": {
+            "id": 9,
+            "name": "test_sub",
+            "description": "test_sub",
+            "parent_id": 0,
+            "cover": "categories/cover/addemployee.png",
+            "featured": "yes",
+            "created_at": "2017-12-17 13:50:09",
+            "updated_at": "2017-12-17 13:50:09"
+        },
+        "sub_category": {
+            "id": 10,
+            "name": "test",
+            "description": "test",
+            "parent_id": 0,
+            "cover": "Nerve-logo.png",
+            "featured": "yes",
+            "created_at": "2017-12-17 20:22:04",
+            "updated_at": "2017-12-17 20:22:04"
+        },
+        "featured": 0,
+        "media": [
+            {
+                "link": "http://192.241.234.75:5000/upload/media/images/foodimage1514814604.jpg",
+                "type": "image"
+            }
+        ],
+        "ingradient": [
+            {
+                "item": {
+                    "id": 1,
+                    "name": "طماطم",
+                    "item_category_id": 1,
+                    "created_at": "2017-12-31 12:10:15",
+                    "updated_at": "2017-12-31 12:15:26"
+                },
+                "unit": "kg",
+                "number": 0.5
+            },
+            {
+                "item": {
+                    "id": 2,
+                    "name": "فلفل",
+                    "item_category_id": 1,
+                    "created_at": "2017-12-31 12:44:13",
+                    "updated_at": "2017-12-31 13:04:17"
+                },
+                "unit": "kg",
+                "number": 1
+            },
+            {
+                "item": {
+                    "id": 2,
+                    "name": "فلفل",
+                    "item_category_id": 1,
+                    "created_at": "2017-12-31 12:44:13",
+                    "updated_at": "2017-12-31 13:04:17"
+                },
+                "unit": "kg",
+                "number": 15
+            }
+        ],
+        "comments": [],
+        "rate": 0,
+        "favorite": false
+    }
+}
+        </code></pre>
+
+<!-- end of post food -->
+
+        <!-- reset my favorite -->
+        <h1>My Favorite </h1>
+        <p>POST : <a href="http://192.241.234.75:5000/api/v1/myfavorite">http://192.241.234.75:5000/api/v1/myfavorite</a><br>
+            status -&gt; (true , false)<br>
+            data -&gt; it return lsit of my myfavorite empty if no favorite<br>
+            error -&gt; [] <br></p>
+        <pre><code>Headers <br>
+            {
+            "Authorization":1Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjRmYTI0YTVmMWZjYjUzYzFjM2E1NjI3ZDQ4ODE1M2E1YWI2ZTU1MzVkZGE2YTUzNjNkOTBiYTQ2OGVkMWE3ZTg5ZDRkNzMwNjFmZDAxNTg5In0.eyJhdWQiOiI0IiwianRpIjoiNGZhMjRhNWYxZmNiNTNjMWMzYTU2MjdkNDg4MTUzYTVhYjZlNTUzNWRkYTZhNTM2M2Q5MGJhNDY4ZWQxYTdlODlkNGQ3MzA2MWZkMDE1ODkiLCJpYXQiOjE1MTQzOTM5MTksIm5iZiI6MTUxNDM5MzkxOSwiZXhwIjoxNTQ1OTI5OTE5LCJzdWIiOiI3Iiwic2NvcGVzIjpbXX0.OgeiLzEyw6L0A4c3iyct-imJ5UaF3kCJAtzow7rdl123u9odVnjmOhTFKsykSQxR7mrPTPbnPSuOJcXMIxOck-X1y6oChZ7KFexjm5St4qUlayW_HzbhVwpUfGqUz5LVKhFOTyT5FBAUHNOUpBhrHt0C8zkK9X4sXfTkKYP_Q2qXgrFpgYcgvwEkz7qlElhB2B7Hz8wEneNy9jll6f_l1IW4z0FiCnzttm_vBy5KVIxtI_yfRpDxMVESo-dD1mL79z82nWqR4w6AYtVodOQQcZK4jHErxwV8hNTfEFZf1mZI94H1qvlI9K4LBflLP4iiH8OaYwL_Tb28N7k3MqE05K-0YE7gvXohorBVE4gC33GKnAMI08ODn513O2QjkYa9ZE40jUc0vJNpakJalm7X-cpf9qXGumcIvVkW8nH9x6h5Bv-vGviki43OuWmFfbaS6x6flBWEVwWzGvdE_RLMQMA8IV4PYVzSZ0lfvfNSNLX9G3F0rEx8z9z5-yKLYG2OqGbaDfcMGjbltI-8jfJXVNZQ7ePABAS4Ar0cGiZgfqNEqfDiCe4fk4ivB6sKZ2Pp2jb28W_fencdGQMkb7eYNtRXoINrvEdpGXlSjO6yGyOzwC1-lUyo0WRutJrjzhsdp_EH9YnTiQ_plhiPFNKVx9g4NxMUWux8QGKfC2IZ_xY
+            }
+        </code></pre>
+        <pre><code>Request <br>
+            {
+            "user_id":1
+            }
+        </code></pre>
+        <pre><code>Response <br>
+            {
+            "recipes": [
+            {
+            "name": "بسبوسة",
+            "prepare_time": 16,
+            "cooking_time": 30,
+            "servingperson": 4,
+            "chefnotes": "يجب وضع العسل وهو سخن عند اخراج البسبوسة من الفرن",
+            "steps": [
+            "اضف البسبوسة  والبيكنج بودر",
+            "اضافة كوب الزبادي",
+            "يسخن السكر والماء لمدة 10 دقائق"
+            ],
+            "tags": [
+            "بسبوسة",
+            "حلويات",
+            "شرقية"
+            ],
+            "status": 1,
+            "created_at": "2017-12-24 08:09:10",
+            "created_by": {
+            "username": "بواسطة فرش",
+            "id": 0
+            },
+            "category": {
+            "id": 16,
+            "name": "الحلويات",
+            "description": "وصفات الحلويات",
+            "parent_id": 0,
+            "cover": "http://192.241.234.75:5000/categories/cover/recipe-image-legacy-id--488691_11.jpg",
+            "featured": 1,
+            "created_at": "2017-12-19 06:24:11",
+            "updated_at": "2017-12-19 06:24:11"
+            },
+            "sub_category": {
+            "id": 24,
+            "name": "تورتات",
+            "description": "تيست",
+            "parent_id": 16,
+            "cover": "http://192.241.234.75:5000/categories/coverrecipe-image-legacy-id--488691_11.jpg",
+            "featured": 0,
+            "created_at": "2017-12-24 02:54:53",
+            "updated_at": "2017-12-24 02:54:53"
+            },
+            "featured": 0,
+            "media": [
+            {
+            "link": "https://www.youtube.com/watch?v=ggheOHTOUPY",
+            "type": "youtube"
+            }
+            ],
+            "ingradient": [
+            {
+            "item": "دقيق بسبوسة",
+            "unit": "kg",
+            "number": 1
+            },
+            {
+            "item": "زبادي",
+            "unit": "kg",
+            "number": 1
+            },
+            {
+            "item": "سكر",
+            "unit": "kg",
+            "number": -0.6
+            }
+            ],
+            "comments": [
+            {
+            "user": {
+            "id": 1,
+            "name": "salem",
+            "email": "ahmedsalem994.as@gmail.com",
+            "created_at": null,
+            "updated_at": "2017-12-17 12:38:13",
+            "username": "salem",
+            "phone": "012333",
+            "photo": "",
+            "facebook_id": null,
+            "api_token": ""
+            },
+            "body": "my comment",
+            "rate": 5
+            }
+            ],
+            "rate": 5,
+            "favorite": true
+            }
+            ]
+            }
+            </code></pre>
+
+        <!-- end of reset password -->
+
+        <!-- reset my favorite -->
+        <h1>Add to My Favorite </h1>
+        <p>POST : <a href="http://192.241.234.75:5000/api/v1/favorite">http://192.241.234.75:5000/api/v1/favorite</a><br>
+            status -&gt; (true , false)<br>
+            data -&gt; it return opject of this fivorite<br>
+            error -&gt; [] <br></p>
+        <pre><code>Headers <br>
+            {
+            "Authorization":1Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjRmYTI0YTVmMWZjYjUzYzFjM2E1NjI3ZDQ4ODE1M2E1YWI2ZTU1MzVkZGE2YTUzNjNkOTBiYTQ2OGVkMWE3ZTg5ZDRkNzMwNjFmZDAxNTg5In0.eyJhdWQiOiI0IiwianRpIjoiNGZhMjRhNWYxZmNiNTNjMWMzYTU2MjdkNDg4MTUzYTVhYjZlNTUzNWRkYTZhNTM2M2Q5MGJhNDY4ZWQxYTdlODlkNGQ3MzA2MWZkMDE1ODkiLCJpYXQiOjE1MTQzOTM5MTksIm5iZiI6MTUxNDM5MzkxOSwiZXhwIjoxNTQ1OTI5OTE5LCJzdWIiOiI3Iiwic2NvcGVzIjpbXX0.OgeiLzEyw6L0A4c3iyct-imJ5UaF3kCJAtzow7rdl123u9odVnjmOhTFKsykSQxR7mrPTPbnPSuOJcXMIxOck-X1y6oChZ7KFexjm5St4qUlayW_HzbhVwpUfGqUz5LVKhFOTyT5FBAUHNOUpBhrHt0C8zkK9X4sXfTkKYP_Q2qXgrFpgYcgvwEkz7qlElhB2B7Hz8wEneNy9jll6f_l1IW4z0FiCnzttm_vBy5KVIxtI_yfRpDxMVESo-dD1mL79z82nWqR4w6AYtVodOQQcZK4jHErxwV8hNTfEFZf1mZI94H1qvlI9K4LBflLP4iiH8OaYwL_Tb28N7k3MqE05K-0YE7gvXohorBVE4gC33GKnAMI08ODn513O2QjkYa9ZE40jUc0vJNpakJalm7X-cpf9qXGumcIvVkW8nH9x6h5Bv-vGviki43OuWmFfbaS6x6flBWEVwWzGvdE_RLMQMA8IV4PYVzSZ0lfvfNSNLX9G3F0rEx8z9z5-yKLYG2OqGbaDfcMGjbltI-8jfJXVNZQ7ePABAS4Ar0cGiZgfqNEqfDiCe4fk4ivB6sKZ2Pp2jb28W_fencdGQMkb7eYNtRXoINrvEdpGXlSjO6yGyOzwC1-lUyo0WRutJrjzhsdp_EH9YnTiQ_plhiPFNKVx9g4NxMUWux8QGKfC2IZ_xY
+            }
+        </code></pre>
+        <pre><code>Request <br>
+            {
+            "user_id":1,
+            "recipe_id":13,
+            "favorite":true
+            }
+        </code></pre>
+        <pre><code>Response <br>
+            {
+            "data": "favorite"
+            }
+        </code></pre>
+
+        <!-- end of reset password -->
+
+        <!-- fresh product -->
+<h1>report Comment </h1>
+        <p>Post : <a href="http://192.241.234.75:5000/api/v1/report">http://192.241.234.75:5000/api/v1/report</a><br>
+            status -&gt; (true , false)<br>
+            data -&gt; it return message<br>
+            error -&gt; <br></p>
+             <pre><code>Request <br>
+             {
+                 "comment_id":2.
+                 "user_id":1
+             }
+        </code></pre>
+        
+        <pre><code>Response <br>
+          {
+    "message": "Done Report"
+}
+        </code></pre>
+
+<!-- end of fresh product -->
+        <!-- reset my favorite -->
+        <h1>Rate </h1>
+        <p>POST : <a href="http://192.241.234.75:5000/api/v1/rate">http://192.241.234.75:5000/api/v1/rate</a><br>
+            status -&gt; (true , false)<br>
+            data -&gt; it return "done rate"<br>
+            error -&gt; [] <br></p>
+        <pre><code>Headers <br>
+            {
+            "Authorization":Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjRmYTI0YTVmMWZjYjUzYzFjM2E1NjI3ZDQ4ODE1M2E1YWI2ZTU1MzVkZGE2YTUzNjNkOTBiYTQ2OGVkMWE3ZTg5ZDRkNzMwNjFmZDAxNTg5In0.eyJhdWQiOiI0IiwianRpIjoiNGZhMjRhNWYxZmNiNTNjMWMzYTU2MjdkNDg4MTUzYTVhYjZlNTUzNWRkYTZhNTM2M2Q5MGJhNDY4ZWQxYTdlODlkNGQ3MzA2MWZkMDE1ODkiLCJpYXQiOjE1MTQzOTM5MTksIm5iZiI6MTUxNDM5MzkxOSwiZXhwIjoxNTQ1OTI5OTE5LCJzdWIiOiI3Iiwic2NvcGVzIjpbXX0.OgeiLzEyw6L0A4c3iyct-imJ5UaF3kCJAtzow7rdl123u9odVnjmOhTFKsykSQxR7mrPTPbnPSuOJcXMIxOck-X1y6oChZ7KFexjm5St4qUlayW_HzbhVwpUfGqUz5LVKhFOTyT5FBAUHNOUpBhrHt0C8zkK9X4sXfTkKYP_Q2qXgrFpgYcgvwEkz7qlElhB2B7Hz8wEneNy9jll6f_l1IW4z0FiCnzttm_vBy5KVIxtI_yfRpDxMVESo-dD1mL79z82nWqR4w6AYtVodOQQcZK4jHErxwV8hNTfEFZf1mZI94H1qvlI9K4LBflLP4iiH8OaYwL_Tb28N7k3MqE05K-0YE7gvXohorBVE4gC33GKnAMI08ODn513O2QjkYa9ZE40jUc0vJNpakJalm7X-cpf9qXGumcIvVkW8nH9x6h5Bv-vGviki43OuWmFfbaS6x6flBWEVwWzGvdE_RLMQMA8IV4PYVzSZ0lfvfNSNLX9G3F0rEx8z9z5-yKLYG2OqGbaDfcMGjbltI-8jfJXVNZQ7ePABAS4Ar0cGiZgfqNEqfDiCe4fk4ivB6sKZ2Pp2jb28W_fencdGQMkb7eYNtRXoINrvEdpGXlSjO6yGyOzwC1-lUyo0WRutJrjzhsdp_EH9YnTiQ_plhiPFNKVx9g4NxMUWux8QGKfC2IZ_xY
+            }
+        </code></pre>
+        <pre><code>Request <br>
+            {
+            "user_id":1,
+            "body":"salem comment",
+            "recipe_id":13,
+            "rate":5
+            }
+        </code></pre>
+        <pre><code>Response <br>
+            {
+            "data": "done rate"
+            }
+        </code></pre>
+
+        <!-- end of reset password -->
+
+        <!-- fresh items -->
+        <h1>item </h1>
+        <p>Post : <a href="http://192.241.234.75:5000/api/v1/item">http://192.241.234.75:5000/api/v1/item</a><br>
+            status -&gt; (true , false)<br>
+            data -&gt; it return list of all item<br>
+            error -&gt; <br></p>
+
+        <pre><code>Request <br>
+            {
+            "name":"فل"
+            }
+        </code></pre>
+        <pre><code>Response <br>
+            {
+            "items": [
+            {
+            "id": 2,
+            "name": "فلفل",
+            "item_category_id": 1,
+            "created_at": "2017-12-31 12:44:13",
+            "updated_at": "2017-12-31 13:04:17",
+            "category": {
+            "id": 1,
+            "name": "خضروات",
+            "created_at": "2017-12-31 11:50:28",
+            "updated_at": "2017-12-31 11:58:28"
+            }
+            }
+            }
+            ]
+            }
+
+        </code></pre>
+
+        <!-- end of items -->
+         <!-- my recipes -->
+         <h1>MyRecipe </h1>
+        <p>Post : <a href="http://192.241.234.75:5000/api/v1/MyRecipe">http://192.241.234.75:5000/api/v1/MyRecipe</a><br>
+            status -&gt; (true , false)<br>
+            data -&gt; remove recipe from my faviorte<br>
+            error -&gt; <br></p>
+
+        <pre><code>Request <br>
+            {
+            "user_id":1,
+            "limit":10,
+            "offset":0
+            }
+        </code></pre>
+        <pre><code>Response <br>
+        {
+        "recipes": [
+        {
+        "id": 29,
+        "name": "uuuu",
+        "prepare_time": 305,
+        "cooking_time": 423,
+        "servingperson": 22,
+        "chefnotes": "Uuuyuutu",
+        "steps": [
+        "gggggg"
+        ],
+        "tags": [],
+        "status": 0,
+        "created_at": "2018-01-18 18:48:20",
+        "created_by": {
+        "id": 1,
+        "name": "Ahmed salem",
+        "username": "salem",
+        "photo": "http://192.241.234.75:5000/upload/media/images/foodimage1516534215.jpg"
+        },
+        "category": {
+        "id": 13,
+        "name": "الافطار",
+        "description": "وجبات الافطار",
+        "parent_id": 0,
+        "cover": "http://192.241.234.75:5000/categories/cover/07INDIAjp7-articleLarge.jpg",
+        "featured": 1,
+        "created_at": "2017-12-19 06:22:00",
+        "updated_at": "2017-12-19 06:22:00"
+        },
+        "sub_category": {
+        "id": 22,
+        "name": "العصائر",
+        "description": "عصائر فريش",
+        "parent_id": 13,
+        "cover": "http://192.241.234.75:5000/categories/coverbhatura-recipe.jpg",
+        "featured": 1,
+        "created_at": "2017-12-24 02:52:40",
+        "updated_at": "2017-12-24 02:52:40"
+        },
+        "featured": 0,
+        "media": [],
+        "ingradient": [
+        {
+        "item": {
+        "id": 2,
+        "name": "فلفل",
+        "item_category_id": 1,
+        "created_at": "2017-12-31 05:44:13",
+        "updated_at": "2017-12-31 06:04:17",
+        "category": {
+        "id": 1,
+        "name": "خضروات",
+        "photo": "http://192.241.234.75:5000/categories/cover/logo.png",
+        "created_at": "2017-12-31 04:50:28",
+        "updated_at": "2017-12-31 04:58:28"
+        }
+        },
+        "unit": "kg",
+        "number": 22
+        }
+        ],
+        "comments": [],
+        "rate": 0,
+        "favorite": true
+        },
+        {
+        "id": 28,
+        "name": "hhh",
+        "prepare_time": 244,
+        "cooking_time": 244,
+        "servingperson": 55,
+        "chefnotes": "عهعععخخ",
+        "steps": [
+        "ااااااااااا",
+        "هنهممهننم"
+        ],
+        "tags": [],
+        "status": 0,
+        "created_at": "2018-01-18 18:12:00",
+        "created_by": {
+        "id": 1,
+        "name": "Ahmed salem",
+        "username": "salem",
+        "photo": "http://192.241.234.75:5000/upload/media/images/foodimage1516534215.jpg"
+        },
+        "category": {
+        "id": 13,
+        "name": "الافطار",
+        "description": "وجبات الافطار",
+        "parent_id": 0,
+        "cover": "http://192.241.234.75:5000/categories/cover/07INDIAjp7-articleLarge.jpg",
+        "featured": 1,
+        "created_at": "2017-12-19 06:22:00",
+        "updated_at": "2017-12-19 06:22:00"
+        },
+        "sub_category": {
+        "id": 22,
+        "name": "العصائر",
+        "description": "عصائر فريش",
+        "parent_id": 13,
+        "cover": "http://192.241.234.75:5000/categories/coverbhatura-recipe.jpg",
+        "featured": 1,
+        "created_at": "2017-12-24 02:52:40",
+        "updated_at": "2017-12-24 02:52:40"
+        },
+        "featured": 0,
+        "media": [],
+        "ingradient": [
+        {
+        "item": {
+        "id": 2,
+        "name": "فلفل",
+        "item_category_id": 1,
+        "created_at": "2017-12-31 05:44:13",
+        "updated_at": "2017-12-31 06:04:17",
+        "category": {
+        "id": 1,
+        "name": "خضروات",
+        "photo": "http://192.241.234.75:5000/categories/cover/logo.png",
+        "created_at": "2017-12-31 04:50:28",
+        "updated_at": "2017-12-31 04:58:28"
+        }
+        },
+        "unit": "kg",
+        "number": 55
+        }
+        ],
+        "comments": [],
+        "rate": 0,
+        "favorite": false
+        },
+        {
+        "id": 27,
+        "name": "uuu",
+        "prepare_time": 244,
+        "cooking_time": 244,
+        "servingperson": 22,
+        "chefnotes": "رررررر",
+        "steps": [
+        "تتتت"
+        ],
+        "tags": [],
+        "status": 0,
+        "created_at": "2018-01-18 16:16:06",
+        "created_by": {
+        "id": 1,
+        "name": "Ahmed salem",
+        "username": "salem",
+        "photo": "http://192.241.234.75:5000/upload/media/images/foodimage1516534215.jpg"
+        },
+        "category": {
+        "id": 13,
+        "name": "الافطار",
+        "description": "وجبات الافطار",
+        "parent_id": 0,
+        "cover": "http://192.241.234.75:5000/categories/cover/07INDIAjp7-articleLarge.jpg",
+        "featured": 1,
+        "created_at": "2017-12-19 06:22:00",
+        "updated_at": "2017-12-19 06:22:00"
+        },
+        "sub_category": {
+        "id": 22,
+        "name": "العصائر",
+        "description": "عصائر فريش",
+        "parent_id": 13,
+        "cover": "http://192.241.234.75:5000/categories/coverbhatura-recipe.jpg",
+        "featured": 1,
+        "created_at": "2017-12-24 02:52:40",
+        "updated_at": "2017-12-24 02:52:40"
+        },
+        "featured": 0,
+        "media": [
+        {
+        "link": "http://192.241.234.75:5000/upload/media/images/foodimage1516292166.jpg",
+        "type": "image"
+        },
+        {
+        "link": "http://192.241.234.75:5000/upload/media/images/foodimage1516292166.jpg",
+        "type": "image"
+        },
+        {
+        "link": "http://192.241.234.75:5000/upload/media/images/foodimage1516292166.jpg",
+        "type": "image"
+        }
+        ],
+        "ingradient": [
+        {
+        "item": null,
+        "unit": "mm",
+        "number": 22
+        }
+        ],
+        "comments": [],
+        "rate": 0,
+        "favorite": false
+        },
+        {
+        "id": 26,
+        "name": "uuu",
+        "prepare_time": 122,
+        "cooking_time": 244,
+        "servingperson": 22,
+        "chefnotes": "اتاتتتت",
+        "steps": [
+        "تتتتت"
+        ],
+        "tags": [],
+        "status": 0,
+        "created_at": "2018-01-18 16:01:05",
+        "created_by": {
+        "id": 1,
+        "name": "Ahmed salem",
+        "username": "salem",
+        "photo": "http://192.241.234.75:5000/upload/media/images/foodimage1516534215.jpg"
+        },
+        "category": {
+        "id": 13,
+        "name": "الافطار",
+        "description": "وجبات الافطار",
+        "parent_id": 0,
+        "cover": "http://192.241.234.75:5000/categories/cover/07INDIAjp7-articleLarge.jpg",
+        "featured": 1,
+        "created_at": "2017-12-19 06:22:00",
+        "updated_at": "2017-12-19 06:22:00"
+        },
+        "sub_category": {
+        "id": 22,
+        "name": "العصائر",
+        "description": "عصائر فريش",
+        "parent_id": 13,
+        "cover": "http://192.241.234.75:5000/categories/coverbhatura-recipe.jpg",
+        "featured": 1,
+        "created_at": "2017-12-24 02:52:40",
+        "updated_at": "2017-12-24 02:52:40"
+        },
+        "featured": 0,
+        "media": [
+        {
+        "link": "http://192.241.234.75:5000/upload/media/images/foodimage1516291265.jpg",
+        "type": "image"
+        },
+        {
+        "link": "http://192.241.234.75:5000/upload/media/images/foodimage1516291265.jpg",
+        "type": "image"
+        },
+        {
+        "link": "http://192.241.234.75:5000/upload/media/images/foodimage1516291265.jpg",
+        "type": "image"
+        }
+        ],
+        "ingradient": [
+        {
+        "item": {
+        "id": 1,
+        "name": "طماطم",
+        "item_category_id": 1,
+        "created_at": "2017-12-31 05:10:15",
+        "updated_at": "2017-12-31 05:15:26",
+        "category": {
+        "id": 1,
+        "name": "خضروات",
+        "photo": "http://192.241.234.75:5000/categories/cover/logo.png",
+        "created_at": "2017-12-31 04:50:28",
+        "updated_at": "2017-12-31 04:58:28"
+        }
+        },
+        "unit": "kg",
+        "number": 12.5
+        }
+        ],
+        "comments": [],
+        "rate": 0,
+        "favorite": false
+        },
+        {
+        "id": 25,
+        "name": "ghhh",
+        "prepare_time": 123,
+        "cooking_time": 122,
+        "servingperson": 22,
+        "chefnotes": "ررننتتح",
+        "steps": [
+        "تتت"
+        ],
+        "tags": [],
+        "status": 0,
+        "created_at": "2018-01-18 15:56:51",
+        "created_by": {
+        "id": 1,
+        "name": "Ahmed salem",
+        "username": "salem",
+        "photo": "http://192.241.234.75:5000/upload/media/images/foodimage1516534215.jpg"
+        },
+        "category": {
+        "id": 13,
+        "name": "الافطار",
+        "description": "وجبات الافطار",
+        "parent_id": 0,
+        "cover": "http://192.241.234.75:5000/categories/cover/07INDIAjp7-articleLarge.jpg",
+        "featured": 1,
+        "created_at": "2017-12-19 06:22:00",
+        "updated_at": "2017-12-19 06:22:00"
+        },
+        "sub_category": {
+        "id": 22,
+        "name": "العصائر",
+        "description": "عصائر فريش",
+        "parent_id": 13,
+        "cover": "http://192.241.234.75:5000/categories/coverbhatura-recipe.jpg",
+        "featured": 1,
+        "created_at": "2017-12-24 02:52:40",
+        "updated_at": "2017-12-24 02:52:40"
+        },
+        "featured": 0,
+        "media": [],
+        "ingradient": [
+        {
+        "item": {
+        "id": 1,
+        "name": "طماطم",
+        "item_category_id": 1,
+        "created_at": "2017-12-31 05:10:15",
+        "updated_at": "2017-12-31 05:15:26",
+        "category": {
+        "id": 1,
+        "name": "خضروات",
+        "photo": "http://192.241.234.75:5000/categories/cover/logo.png",
+        "created_at": "2017-12-31 04:50:28",
+        "updated_at": "2017-12-31 04:58:28"
+        }
+        },
+        "unit": "kg",
+        "number": 12.5
+        }
+        ],
+        "comments": [],
+        "rate": 0,
+        "favorite": false
+        },
+        {
+        "id": 24,
+        "name": "مكرونة",
+        "prepare_time": 16,
+        "cooking_time": 30,
+        "servingperson": 5,
+        "chefnotes": "يجبوضعالعسلوهوساخنعليالبسبوسةعنداخراجهامنالفرن",
+        "steps": [
+        "اضفالبسبوسةوعليهاالبيكنجبودر",
+        "اضفالزباديعليالدقيق"
+        ],
+        "tags": [],
+        "status": 0,
+        "created_at": "2018-01-17 16:30:31",
+        "created_by": {
+        "id": 1,
+        "name": "Ahmed salem",
+        "username": "salem",
+        "photo": "http://192.241.234.75:5000/upload/media/images/foodimage1516534215.jpg"
+        },
+        "category": {
+        "id": 14,
+        "name": "الغداء",
+        "description": "وجبات الغداء",
+        "parent_id": 0,
+        "cover": "http://192.241.234.75:5000/categories/cover/14ROASTEDSALMON-articleLarge.jpg",
+        "featured": 1,
+        "created_at": "2017-12-19 06:22:44",
+        "updated_at": "2017-12-19 06:22:44"
+        },
+        "sub_category": {
+        "id": 25,
+        "name": "اكلات هندي",
+        "description": "تيست",
+        "parent_id": 14,
+        "cover": "http://192.241.234.75:5000/categories/cover/07INDIAjp7-articleLarge.jpg",
+        "featured": 1,
+        "created_at": "2018-01-03 09:18:35",
+        "updated_at": "2018-01-03 09:18:35"
+        },
+        "featured": 0,
+        "media": [
+        {
+        "link": "http://192.241.234.75:5000/upload/media/images/foodimage1516206631.jpg",
+        "type": "image"
+        }
+        ],
+        "ingradient": [
+        {
+        "item": {
+        "id": 1,
+        "name": "طماطم",
+        "item_category_id": 1,
+        "created_at": "2017-12-31 05:10:15",
+        "updated_at": "2017-12-31 05:15:26",
+        "category": {
+        "id": 1,
+        "name": "خضروات",
+        "photo": "http://192.241.234.75:5000/categories/cover/logo.png",
+        "created_at": "2017-12-31 04:50:28",
+        "updated_at": "2017-12-31 04:58:28"
+        }
+        },
+        "unit": "kg",
+        "number": 12.5
+        }
+        ],
+        "comments": [],
+        "rate": 0,
+        "favorite": false
+        },
+        {
+        "id": 23,
+        "name": "مكرونة",
+        "prepare_time": 16,
+        "cooking_time": 30,
+        "servingperson": 5,
+        "chefnotes": "يجبوضعالعسلوهوساخنعليالبسبوسةعنداخراجهامنالفرن",
+        "steps": [
+        "اضفالبسبوسةوعليهاالبيكنجبودر",
+        "اضفالزباديعليالدقيق"
+        ],
+        "tags": [],
+        "status": 0,
+        "created_at": "2018-01-17 16:29:46",
+        "created_by": {
+        "id": 1,
+        "name": "Ahmed salem",
+        "username": "salem",
+        "photo": "http://192.241.234.75:5000/upload/media/images/foodimage1516534215.jpg"
+        },
+        "category": {
+        "id": 14,
+        "name": "الغداء",
+        "description": "وجبات الغداء",
+        "parent_id": 0,
+        "cover": "http://192.241.234.75:5000/categories/cover/14ROASTEDSALMON-articleLarge.jpg",
+        "featured": 1,
+        "created_at": "2017-12-19 06:22:44",
+        "updated_at": "2017-12-19 06:22:44"
+        },
+        "sub_category": {
+        "id": 25,
+        "name": "اكلات هندي",
+        "description": "تيست",
+        "parent_id": 14,
+        "cover": "http://192.241.234.75:5000/categories/cover/07INDIAjp7-articleLarge.jpg",
+        "featured": 1,
+        "created_at": "2018-01-03 09:18:35",
+        "updated_at": "2018-01-03 09:18:35"
+        },
+        "featured": 0,
+        "media": [
+        {
+        "link": "http://192.241.234.75:5000/upload/media/images/foodimage1516206586.jpg",
+        "type": "image"
+        }
+        ],
+        "ingradient": [
+        {
+        "item": {
+        "id": 1,
+        "name": "طماطم",
+        "item_category_id": 1,
+        "created_at": "2017-12-31 05:10:15",
+        "updated_at": "2017-12-31 05:15:26",
+        "category": {
+        "id": 1,
+        "name": "خضروات",
+        "photo": "http://192.241.234.75:5000/categories/cover/logo.png",
+        "created_at": "2017-12-31 04:50:28",
+        "updated_at": "2017-12-31 04:58:28"
+        }
+        },
+        "unit": "kg",
+        "number": 12.5
+        }
+        ],
+        "comments": [],
+        "rate": 0,
+        "favorite": false
+        },
+        {
+        "id": 22,
+        "name": "مكرونة",
+        "prepare_time": 16,
+        "cooking_time": 30,
+        "servingperson": 5,
+        "chefnotes": "يجبوضعالعسلوهوساخنعليالبسبوسةعنداخراجهامنالفرن",
+        "steps": [
+        "اضفالبسبوسةوعليهاالبيكنجبودر",
+        "اضفالزباديعليالدقيق"
+        ],
+        "tags": [],
+        "status": 0,
+        "created_at": "2018-01-17 16:21:07",
+        "created_by": {
+        "id": 1,
+        "name": "Ahmed salem",
+        "username": "salem",
+        "photo": "http://192.241.234.75:5000/upload/media/images/foodimage1516534215.jpg"
+        },
+        "category": {
+        "id": 16,
+        "name": "الحلويات",
+        "description": "وصفات الحلويات",
+        "parent_id": 0,
+        "cover": "http://192.241.234.75:5000/categories/cover/recipe-image-legacy-id--488691_11.jpg",
+        "featured": 1,
+        "created_at": "2017-12-19 06:24:11",
+        "updated_at": "2017-12-19 06:24:11"
+        },
+        "sub_category": {
+        "id": 24,
+        "name": "تورتات",
+        "description": "تيست",
+        "parent_id": 16,
+        "cover": "http://192.241.234.75:5000/categories/coverrecipe-image-legacy-id--488691_11.jpg",
+        "featured": 0,
+        "created_at": "2017-12-24 02:54:53",
+        "updated_at": "2017-12-24 02:54:53"
+        },
+        "featured": 0,
+        "media": [
+        {
+        "link": "http://192.241.234.75:5000/upload/media/images/foodimage1516206067.jpg",
+        "type": "image"
+        }
+        ],
+        "ingradient": [
+        {
+        "item": {
+        "id": 1,
+        "name": "طماطم",
+        "item_category_id": 1,
+        "created_at": "2017-12-31 05:10:15",
+        "updated_at": "2017-12-31 05:15:26",
+        "category": {
+        "id": 1,
+        "name": "خضروات",
+        "photo": "http://192.241.234.75:5000/categories/cover/logo.png",
+        "created_at": "2017-12-31 04:50:28",
+        "updated_at": "2017-12-31 04:58:28"
+        }
+        },
+        "unit": "kg",
+        "number": 0.5
+        },
+        {
+        "item": {
+        "id": 2,
+        "name": "فلفل",
+        "item_category_id": 1,
+        "created_at": "2017-12-31 05:44:13",
+        "updated_at": "2017-12-31 06:04:17",
+        "category": {
+        "id": 1,
+        "name": "خضروات",
+        "photo": "http://192.241.234.75:5000/categories/cover/logo.png",
+        "created_at": "2017-12-31 04:50:28",
+        "updated_at": "2017-12-31 04:58:28"
+        }
+        },
+        "unit": "kg",
+        "number": 1
+        }
+        ],
+        "comments": [],
+        "rate": 0,
+        "favorite": false
+        },
+        {
+        "id": 21,
+        "name": "مكرونة",
+        "prepare_time": 16,
+        "cooking_time": 30,
+        "servingperson": 5,
+        "chefnotes": "يجبوضعالعسلوهوساخنعليالبسبوسةعنداخراجهامنالفرن",
+        "steps": [
+        "اضفالبسبوسةوعليهاالبيكنجبودر",
+        "اضفالزباديعليالدقيق"
+        ],
+        "tags": [],
+        "status": 0,
+        "created_at": "2018-01-17 16:19:42",
+        "created_by": {
+        "id": 1,
+        "name": "Ahmed salem",
+        "username": "salem",
+        "photo": "http://192.241.234.75:5000/upload/media/images/foodimage1516534215.jpg"
+        },
+        "category": {
+        "id": 16,
+        "name": "الحلويات",
+        "description": "وصفات الحلويات",
+        "parent_id": 0,
+        "cover": "http://192.241.234.75:5000/categories/cover/recipe-image-legacy-id--488691_11.jpg",
+        "featured": 1,
+        "created_at": "2017-12-19 06:24:11",
+        "updated_at": "2017-12-19 06:24:11"
+        },
+        "sub_category": {
+        "id": 24,
+        "name": "تورتات",
+        "description": "تيست",
+        "parent_id": 16,
+        "cover": "http://192.241.234.75:5000/categories/coverrecipe-image-legacy-id--488691_11.jpg",
+        "featured": 0,
+        "created_at": "2017-12-24 02:54:53",
+        "updated_at": "2017-12-24 02:54:53"
+        },
+        "featured": 0,
+        "media": [],
+        "ingradient": [],
+        "comments": [],
+        "rate": 0,
+        "favorite": false
+        },
+        {
+        "id": 20,
+        "name": "مكرونة",
+        "prepare_time": 16,
+        "cooking_time": 30,
+        "servingperson": 5,
+        "chefnotes": "يجبوضعالعسلوهوساخنعليالبسبوسةعنداخراجهامنالفرن",
+        "steps": [
+        "اضفالبسبوسةوعليهاالبيكنجبودر",
+        "اضفالزباديعليالدقيق"
+        ],
+        "tags": [],
+        "status": 0,
+        "created_at": "2018-01-17 16:11:58",
+        "created_by": {
+        "id": 1,
+        "name": "Ahmed salem",
+        "username": "salem",
+        "photo": "http://192.241.234.75:5000/upload/media/images/foodimage1516534215.jpg"
+        },
+        "category": {
+        "id": 16,
+        "name": "الحلويات",
+        "description": "وصفات الحلويات",
+        "parent_id": 0,
+        "cover": "http://192.241.234.75:5000/categories/cover/recipe-image-legacy-id--488691_11.jpg",
+        "featured": 1,
+        "created_at": "2017-12-19 06:24:11",
+        "updated_at": "2017-12-19 06:24:11"
+        },
+        "sub_category": {
+        "id": 24,
+        "name": "تورتات",
+        "description": "تيست",
+        "parent_id": 16,
+        "cover": "http://192.241.234.75:5000/categories/coverrecipe-image-legacy-id--488691_11.jpg",
+        "featured": 0,
+        "created_at": "2017-12-24 02:54:53",
+        "updated_at": "2017-12-24 02:54:53"
+        },
+        "featured": 0,
+        "media": [
+        {
+        "link": "http://192.241.234.75:5000/upload/media/images/foodimage1516205519.jpg",
+        "type": "image"
+        }
+        ],
+        "ingradient": [
+        {
+        "item": {
+        "id": 1,
+        "name": "طماطم",
+        "item_category_id": 1,
+        "created_at": "2017-12-31 05:10:15",
+        "updated_at": "2017-12-31 05:15:26",
+        "category": {
+        "id": 1,
+        "name": "خضروات",
+        "photo": "http://192.241.234.75:5000/categories/cover/logo.png",
+        "created_at": "2017-12-31 04:50:28",
+        "updated_at": "2017-12-31 04:58:28"
+        }
+        },
+        "unit": "kg",
+        "number": 0.5
+        },
+        {
+        "item": {
+        "id": 2,
+        "name": "فلفل",
+        "item_category_id": 1,
+        "created_at": "2017-12-31 05:44:13",
+        "updated_at": "2017-12-31 06:04:17",
+        "category": {
+        "id": 1,
+        "name": "خضروات",
+        "photo": "http://192.241.234.75:5000/categories/cover/logo.png",
+        "created_at": "2017-12-31 04:50:28",
+        "updated_at": "2017-12-31 04:58:28"
+        }
+        },
+        "unit": "kg",
+        "number": 1
+        }
+        ],
+        "comments": [],
+        "rate": 0,
+        "favorite": false
+        },
+        {
+        "id": 19,
+        "name": "مكرونة",
+        "prepare_time": 16,
+        "cooking_time": 30,
+        "servingperson": 5,
+        "chefnotes": "يجبوضعالعسلوهوساخنعليالبسبوسةعنداخراجهامنالفرن",
+        "steps": [
+        "اضفالبسبوسةوعليهاالبيكنجبودر",
+        "اضفالزباديعليالدقيق"
+        ],
+        "tags": [],
+        "status": 0,
+        "created_at": "2018-01-17 15:59:16",
+        "created_by": {
+        "id": 1,
+        "name": "Ahmed salem",
+        "username": "salem",
+        "photo": "http://192.241.234.75:5000/upload/media/images/foodimage1516534215.jpg"
+        },
+        "category": {
+        "id": 16,
+        "name": "الحلويات",
+        "description": "وصفات الحلويات",
+        "parent_id": 0,
+        "cover": "http://192.241.234.75:5000/categories/cover/recipe-image-legacy-id--488691_11.jpg",
+        "featured": 1,
+        "created_at": "2017-12-19 06:24:11",
+        "updated_at": "2017-12-19 06:24:11"
+        },
+        "sub_category": {
+        "id": 24,
+        "name": "تورتات",
+        "description": "تيست",
+        "parent_id": 16,
+        "cover": "http://192.241.234.75:5000/categories/coverrecipe-image-legacy-id--488691_11.jpg",
+        "featured": 0,
+        "created_at": "2017-12-24 02:54:53",
+        "updated_at": "2017-12-24 02:54:53"
+        },
+        "featured": 0,
+        "media": [
+        {
+        "link": "http://192.241.234.75:5000/upload/media/images/foodimage1516204756.jpg",
+        "type": "image"
+        }
+        ],
+        "ingradient": [
+        {
+        "item": {
+        "id": 1,
+        "name": "طماطم",
+        "item_category_id": 1,
+        "created_at": "2017-12-31 05:10:15",
+        "updated_at": "2017-12-31 05:15:26",
+        "category": {
+        "id": 1,
+        "name": "خضروات",
+        "photo": "http://192.241.234.75:5000/categories/cover/logo.png",
+        "created_at": "2017-12-31 04:50:28",
+        "updated_at": "2017-12-31 04:58:28"
+        }
+        },
+        "unit": "kg",
+        "number": 0.5
+        },
+        {
+        "item": {
+        "id": 2,
+        "name": "فلفل",
+        "item_category_id": 1,
+        "created_at": "2017-12-31 05:44:13",
+        "updated_at": "2017-12-31 06:04:17",
+        "category": {
+        "id": 1,
+        "name": "خضروات",
+        "photo": "http://192.241.234.75:5000/categories/cover/logo.png",
+        "created_at": "2017-12-31 04:50:28",
+        "updated_at": "2017-12-31 04:58:28"
+        }
+        },
+        "unit": "kg",
+        "number": 1
+        }
+        ],
+        "comments": [],
+        "rate": 0,
+        "favorite": false
+        },
+        {
+        "id": 18,
+        "name": "مكرونة",
+        "prepare_time": 16,
+        "cooking_time": 30,
+        "servingperson": 5,
+        "chefnotes": "يجبوضعالعسلوهوساخنعليالبسبوسةعنداخراجهامنالفرن",
+        "steps": [
+        "اضفالبسبوسةوعليهاالبيكنجبودر",
+        "اضفالزباديعليالدقيق"
+        ],
+        "tags": [],
+        "status": 0,
+        "created_at": "2018-01-17 15:57:22",
+        "created_by": {
+        "id": 1,
+        "name": "Ahmed salem",
+        "username": "salem",
+        "photo": "http://192.241.234.75:5000/upload/media/images/foodimage1516534215.jpg"
+        },
+        "category": {
+        "id": 16,
+        "name": "الحلويات",
+        "description": "وصفات الحلويات",
+        "parent_id": 0,
+        "cover": "http://192.241.234.75:5000/categories/cover/recipe-image-legacy-id--488691_11.jpg",
+        "featured": 1,
+        "created_at": "2017-12-19 06:24:11",
+        "updated_at": "2017-12-19 06:24:11"
+        },
+        "sub_category": {
+        "id": 24,
+        "name": "تورتات",
+        "description": "تيست",
+        "parent_id": 16,
+        "cover": "http://192.241.234.75:5000/categories/coverrecipe-image-legacy-id--488691_11.jpg",
+        "featured": 0,
+        "created_at": "2017-12-24 02:54:53",
+        "updated_at": "2017-12-24 02:54:53"
+        },
+        "featured": 0,
+        "media": [
+        {
+        "link": "http://192.241.234.75:5000/upload/media/images/foodimage1516204642.jpg",
+        "type": "image"
+        }
+        ],
+        "ingradient": [
+        {
+        "item": {
+        "id": 1,
+        "name": "طماطم",
+        "item_category_id": 1,
+        "created_at": "2017-12-31 05:10:15",
+        "updated_at": "2017-12-31 05:15:26",
+        "category": {
+        "id": 1,
+        "name": "خضروات",
+        "photo": "http://192.241.234.75:5000/categories/cover/logo.png",
+        "created_at": "2017-12-31 04:50:28",
+        "updated_at": "2017-12-31 04:58:28"
+        }
+        },
+        "unit": "kg",
+        "number": 0.5
+        },
+        {
+        "item": {
+        "id": 2,
+        "name": "فلفل",
+        "item_category_id": 1,
+        "created_at": "2017-12-31 05:44:13",
+        "updated_at": "2017-12-31 06:04:17",
+        "category": {
+        "id": 1,
+        "name": "خضروات",
+        "photo": "http://192.241.234.75:5000/categories/cover/logo.png",
+        "created_at": "2017-12-31 04:50:28",
+        "updated_at": "2017-12-31 04:58:28"
+        }
+        },
+        "unit": "kg",
+        "number": 1
+        }
+        ],
+        "comments": [],
+        "rate": 0,
+        "favorite": false
+        },
+        {
+        "id": 17,
+        "name": "مكرونة",
+        "prepare_time": 16,
+        "cooking_time": 30,
+        "servingperson": 5,
+        "chefnotes": "يجبوضعالعسلوهوساخنعليالبسبوسةعنداخراجهامنالفرن",
+        "steps": [
+        "اضفالبسبوسةوعليهاالبيكنجبودر",
+        "اضفالزباديعليالدقيق"
+        ],
+        "tags": [],
+        "status": 0,
+        "created_at": "2018-01-17 15:57:11",
+        "created_by": {
+        "id": 1,
+        "name": "Ahmed salem",
+        "username": "salem",
+        "photo": "http://192.241.234.75:5000/upload/media/images/foodimage1516534215.jpg"
+        },
+        "category": {
+        "id": 16,
+        "name": "الحلويات",
+        "description": "وصفات الحلويات",
+        "parent_id": 0,
+        "cover": "http://192.241.234.75:5000/categories/cover/recipe-image-legacy-id--488691_11.jpg",
+        "featured": 1,
+        "created_at": "2017-12-19 06:24:11",
+        "updated_at": "2017-12-19 06:24:11"
+        },
+        "sub_category": {
+        "id": 24,
+        "name": "تورتات",
+        "description": "تيست",
+        "parent_id": 16,
+        "cover": "http://192.241.234.75:5000/categories/coverrecipe-image-legacy-id--488691_11.jpg",
+        "featured": 0,
+        "created_at": "2017-12-24 02:54:53",
+        "updated_at": "2017-12-24 02:54:53"
+        },
+        "featured": 0,
+        "media": [
+        {
+        "link": "http://192.241.234.75:5000/upload/media/images/foodimage1516204631.jpg",
+        "type": "image"
+        }
+        ],
+        "ingradient": [
+        {
+        "item": {
+        "id": 1,
+        "name": "طماطم",
+        "item_category_id": 1,
+        "created_at": "2017-12-31 05:10:15",
+        "updated_at": "2017-12-31 05:15:26",
+        "category": {
+        "id": 1,
+        "name": "خضروات",
+        "photo": "http://192.241.234.75:5000/categories/cover/logo.png",
+        "created_at": "2017-12-31 04:50:28",
+        "updated_at": "2017-12-31 04:58:28"
+        }
+        },
+        "unit": "kg",
+        "number": 0.5
+        },
+        {
+        "item": {
+        "id": 2,
+        "name": "فلفل",
+        "item_category_id": 1,
+        "created_at": "2017-12-31 05:44:13",
+        "updated_at": "2017-12-31 06:04:17",
+        "category": {
+        "id": 1,
+        "name": "خضروات",
+        "photo": "http://192.241.234.75:5000/categories/cover/logo.png",
+        "created_at": "2017-12-31 04:50:28",
+        "updated_at": "2017-12-31 04:58:28"
+        }
+        },
+        "unit": "kg",
+        "number": 1
+        }
+        ],
+        "comments": [],
+        "rate": 0,
+        "favorite": false
+        },
+        {
+        "id": 16,
+        "name": "تورتة  خضار",
+        "prepare_time": 18,
+        "cooking_time": 30,
+        "servingperson": 5,
+        "chefnotes": "يجبوضعالعسلوهوساخنعليالبسبوسةعنداخراجهامنالفرن",
+        "steps": [
+        "اضفالبسبوسةوعليهاالبيكنجبودر",
+        "اضفالزباديعليالدقيق"
+        ],
+        "tags": [
+        "غداء",
+        "asa"
+        ],
+        "status": 1,
+        "created_at": "2018-01-14 10:35:04",
+        "created_by": {
+        "id": 1,
+        "name": "Ahmed salem",
+        "username": "salem",
+        "photo": "http://192.241.234.75:5000/upload/media/images/foodimage1516534215.jpg"
+        },
+        "category": {
+        "id": 16,
+        "name": "الحلويات",
+        "description": "وصفات الحلويات",
+        "parent_id": 0,
+        "cover": "http://192.241.234.75:5000/categories/cover/recipe-image-legacy-id--488691_11.jpg",
+        "featured": 1,
+        "created_at": "2017-12-19 06:24:11",
+        "updated_at": "2017-12-19 06:24:11"
+        },
+        "sub_category": {
+        "id": 24,
+        "name": "تورتات",
+        "description": "تيست",
+        "parent_id": 16,
+        "cover": "http://192.241.234.75:5000/categories/coverrecipe-image-legacy-id--488691_11.jpg",
+        "featured": 0,
+        "created_at": "2017-12-24 02:54:53",
+        "updated_at": "2017-12-24 02:54:53"
+        },
+        "featured": 0,
+        "media": [
+        {
+        "link": "http://192.241.234.75:5000/upload/media/images/foodimage1515926104.jpg",
+        "type": "image"
+        }
+        ],
+        "ingradient": [
+        {
+        "item": {
+        "id": 1,
+        "name": "طماطم",
+        "item_category_id": 1,
+        "created_at": "2017-12-31 05:10:15",
+        "updated_at": "2017-12-31 05:15:26",
+        "category": {
+        "id": 1,
+        "name": "خضروات",
+        "photo": "http://192.241.234.75:5000/categories/cover/logo.png",
+        "created_at": "2017-12-31 04:50:28",
+        "updated_at": "2017-12-31 04:58:28"
+        }
+        },
+        "unit": "kg",
+        "number": 0.5
+        },
+        {
+        "item": {
+        "id": 2,
+        "name": "فلفل",
+        "item_category_id": 1,
+        "created_at": "2017-12-31 05:44:13",
+        "updated_at": "2017-12-31 06:04:17",
+        "category": {
+        "id": 1,
+        "name": "خضروات",
+        "photo": "http://192.241.234.75:5000/categories/cover/logo.png",
+        "created_at": "2017-12-31 04:50:28",
+        "updated_at": "2017-12-31 04:58:28"
+        }
+        },
+        "unit": "kg",
+        "number": 1
+        }
+        ],
+        "comments": [],
+        "rate": 0,
+        "favorite": false
+        }
+        ],
+        "user": {
+        "id": 1,
+        "name": "Ahmed salem",
+        "email": "ahmedsalem994.as@gmail.com",
+        "created_at": null,
+        "updated_at": "2018-01-21 11:30:15",
+        "username": "salem",
+        "phone": "012333",
+        "photo": "http://192.241.234.75:5000/upload/media/images/foodimage1516534215.jpg",
+        "facebook_id": null
+        },
+        "CountRecipes": 14,
+        "rate": 0
+        }
+        </code></pre>
+
+         <!-- end my recipes -->
+         <!-- Un unFavorite -->
+        <h1>unFavorite </h1>
+        <p>Post : <a href="http://192.241.234.75:5000/api/v1/unFavorite">http://192.241.234.75:5000/api/v1/unFavorite</a><br>
+            status -&gt; (true , false)<br>
+            data -&gt; remove recipe from my faviorte<br>
+            error -&gt; <br></p>
+
+        <pre><code>Request <br>
+           {
+    "user_id":1,
+    "recipe_id":10
+}
+        </code></pre>
+        <pre><code>Response <br>
+           {
+    "data": "Removed"
+}
+        </code></pre>
+
+        <!-- unfav -->
+
+        <!-- serach for recipe -->
+                 <!-- Un searchRecipe -->
+        <h1>search Recipe By name </h1>
+        <p>Post : <a href="http://192.241.234.75:5000/api/v1/searchRecipe">http://192.241.234.75:5000/api/v1/searchRecipe</a><br>
+            status -&gt; (true , false)<br>
+            data -&gt; return recipes <br>
+            error -&gt; <br></p>
+
+        <pre><code>Request <br>
+           {
+             "name":"test food"
+           }
+        </code></pre>
+        <pre><code>Response <br>
+          {
+    "recipes": [
+        {
+            "id": 2,
+            "name": "test food",
+            "prepare_time": 60,
+            "cooking_time": 120,
+            "servingperson": 2,
+            "chefnotes": "test food",
+            "steps": [
+                "one streps"
+            ],
+            "tags": [
+                "غداء"
+            ],
+            "status": 1,
+            "created_at": "2017-12-20 16:00:12",
+            "created_by": {
+                "username": "بواسطة فرش",
+                "id": 0
+            },
+            "category": {
+                "id": 9,
+                "name": "test_sub",
+                "description": "test_sub",
+                "parent_id": 0,
+                "cover": "categories/cover/addemployee.png",
+                "featured": "yes",
+                "created_at": "2017-12-17 13:50:09",
+                "updated_at": "2017-12-17 13:50:09"
+            },
+            "sub_category": {
+                "id": 13,
+                "name": "sub category",
+                "description": "sub category",
+                "parent_id": 9,
+                "cover": "ta3een.png",
+                "featured": "yes",
+                "created_at": "2017-12-18 18:14:49",
+                "updated_at": "2017-12-18 18:14:49"
+            },
+            "featured": 1,
+            "media": [
+                {
+                    "link": "http://192.241.234.75:5000/upload/media/image/2/15622551_1818944998319466_8744812521888958454_n.png",
+                    "type": "image"
+                },
+                {
+                    "link": "http://192.241.234.75:5000/upload/media/image/2/2d82a950711655.58d7db06c8c9a.png",
+                    "type": "image"
+                }
+            ],
+            "ingradient": [
+                {
+                    "item": {
+                        "id": 2,
+                        "name": "فلفل",
+                        "item_category_id": 1,
+                        "created_at": "2017-12-31 12:44:13",
+                        "updated_at": "2017-12-31 13:04:17",
+                        "category": {
+                            "id": 1,
+                            "name": "خضروات",
+                            "photo": "",
+                            "created_at": "2017-12-31 11:50:28",
+                            "updated_at": "2017-12-31 11:58:28"
+                        }
+                    },
+                    "unit": "كيلو جرام",
+                    "number": 1
+                },
+                {
+                    "item": {
+                        "id": 1,
+                        "name": "طماطم",
+                        "item_category_id": 1,
+                        "created_at": "2017-12-31 12:10:15",
+                        "updated_at": "2017-12-31 12:15:26",
+                        "category": {
+                            "id": 1,
+                            "name": "خضروات",
+                            "photo": "",
+                            "created_at": "2017-12-31 11:50:28",
+                            "updated_at": "2017-12-31 11:58:28"
+                        }
+                    },
+                    "unit": "كيلو جرام",
+                    "number": 6
+                },
+                {
+                    "item": {
+                        "id": 2,
+                        "name": "فلفل",
+                        "item_category_id": 1,
+                        "created_at": "2017-12-31 12:44:13",
+                        "updated_at": "2017-12-31 13:04:17",
+                        "category": {
+                            "id": 1,
+                            "name": "خضروات",
+                            "photo": "",
+                            "created_at": "2017-12-31 11:50:28",
+                            "updated_at": "2017-12-31 11:58:28"
+                        }
+                    },
+                    "unit": "ملى جرام",
+                    "number": 55
+                }
+            ],
+            "comments": [],
+            "rate": 0,
+            "favorite": false
+        }
+    ]
+}
+        </code></pre>
+
+        <!-- unfav -->
+        <!-- end search for recipe -->
+
+
+        <!-- search by tag -->
+        <h1>searchRecipeByTags </h1>
+        <p>Post : <a href="http://192.241.234.75:5000/api/v1/searchRecipeByTags">http://192.241.234.75:5000/api/v1/searchRecipeByTags</a><br>
+            status -&gt; (true , false)<br>
+            data -&gt; recipes<br>
+            error -&gt; <br></p>
+
+        <pre><code>Request <br>
+         {
+    "tags":"not"
+}
+        </code></pre>
+        <pre><code>Response <br>
+       {
+    "recipes": [
+        {
+            "id": 5,
+            "name": "shit  food",
+            "prepare_time": 0,
+            "cooking_time": 20,
+            "servingperson": 5,
+            "chefnotes": "shit  food",
+            "steps": [
+                "shit  food",
+                "shit"
+            ],
+            "tags": [
+                "shit  food",
+                "not"
+            ],
+            "status": 1,
+            "created_at": "2017-12-21 10:46:15",
+            "created_by": {
+                "username": "بواسطة فرش",
+                "id": 0
+            },
+            "category": {
+                "id": 9,
+                "name": "test_sub",
+                "description": "test_sub",
+                "parent_id": 0,
+                "cover": "categories/cover/addemployee.png",
+                "featured": "yes",
+                "created_at": "2017-12-17 13:50:09",
+                "updated_at": "2017-12-17 13:50:09"
+            },
+            "sub_category": {
+                "id": 13,
+                "name": "sub category",
+                "description": "sub category",
+                "parent_id": 9,
+                "cover": "ta3een.png",
+                "featured": "yes",
+                "created_at": "2017-12-18 18:14:49",
+                "updated_at": "2017-12-18 18:14:49"
+            },
+            "featured": 1,
+            "media": [],
+            "ingradient": [
+                {
+                    "item": {
+                        "id": 1,
+                        "name": "طماطم",
+                        "item_category_id": 1,
+                        "created_at": "2017-12-31 12:10:15",
+                        "updated_at": "2017-12-31 12:15:26",
+                        "category": {
+                            "id": 1,
+                            "name": "خضروات",
+                            "photo": "",
+                            "created_at": "2017-12-31 11:50:28",
+                            "updated_at": "2017-12-31 11:58:28"
+                        }
+                    },
+                    "unit": "kg",
+                    "number": 1
+                },
+                {
+                    "item": {
+                        "id": 2,
+                        "name": "فلفل",
+                        "item_category_id": 1,
+                        "created_at": "2017-12-31 12:44:13",
+                        "updated_at": "2017-12-31 13:04:17",
+                        "category": {
+                            "id": 1,
+                            "name": "خضروات",
+                            "photo": "",
+                            "created_at": "2017-12-31 11:50:28",
+                            "updated_at": "2017-12-31 11:58:28"
+                        }
+                    },
+                    "unit": "kg",
+                    "number": 2
+                }
+            ],
+            "comments": [],
+            "rate": 0,
+            "favorite": false
+        },
+        {
+            "id": 8,
+            "name": "xaxa",
+            "prepare_time": 0,
+            "cooking_time": 8995,
+            "servingperson": 8,
+            "chefnotes": "adsas",
+            "steps": [
+                "one"
+            ],
+            "tags": [
+                "sasa",
+                "not"
+            ],
+            "status": 1,
+            "created_at": "2017-12-21 12:27:49",
+            "created_by": {
+                "username": "بواسطة فرش",
+                "id": 0
+            },
+            "category": {
+                "id": 9,
+                "name": "test_sub",
+                "description": "test_sub",
+                "parent_id": 0,
+                "cover": "categories/cover/addemployee.png",
+                "featured": "yes",
+                "created_at": "2017-12-17 13:50:09",
+                "updated_at": "2017-12-17 13:50:09"
+            },
+            "sub_category": {
+                "id": 13,
+                "name": "sub category",
+                "description": "sub category",
+                "parent_id": 9,
+                "cover": "ta3een.png",
+                "featured": "yes",
+                "created_at": "2017-12-18 18:14:49",
+                "updated_at": "2017-12-18 18:14:49"
+            },
+            "featured": 1,
+            "media": [],
+            "ingradient": [],
+            "comments": [],
+            "rate": 0,
+            "favorite": false
+        }
+    ]
+}
+        </code></pre>
+
+        <!-- end search by tag -->
+
+        <!-- fresh add new item -->
+        <h1>add new item </h1>
+        <p>Post : <a href="http://192.241.234.75:5000/api/v1/newItem">http://192.241.234.75:5000/api/v1/newItem</a><br>
+            status -&gt; (true , false)<br>
+            data -&gt; it return list of all item<br>
+            error -&gt; <br></p>
+
+        <pre><code>Request <br>
+            {
+            "name":"فلف احمر"
+            }
+        </code></pre>
+        <pre><code>Response <br>
+            {
+            "item": {
+            "name": "فلف احمر",
+            "item_category_id": "3",
+            "updated_at": "2017-12-31 13:44:58",
+            "created_at": "2017-12-31 13:44:58",
+            "id": 3
+            }
+            }
+
+        </code></pre>
+
+        <!-- end of items -->
+
+
+
+
+
+    <!--subcategoy and category-->
+
+        <!-- fresh product -->
+        <h1>report Comment </h1>
+        <p>Post : <a href="http://192.241.234.75:5000/api/v1/report">http://192.241.234.75:5000/api/v1/report</a><br>
+            status -&gt; (true , false)<br>
+            data -&gt; it return message<br>
+            error -&gt; <br></p>
+             <pre><code>Request <br>
+                 {
+                 "comment_id":2.
+                 "user_id":1
+                 }
+             </code></pre>
+
+        <pre><code>Response <br>
+            {
+            "message": "Done Report"
+            }
+        </code></pre>
+
+        <!-- end of fresh product -->
+        <!-- reset my favorite -->
+        <h1>GEt Recipe By Category And Subcategory </h1>
+        <p>POST : <a href="http://192.241.234.75:5000/api/v1/recipeByCAtegoryAndSubcategory">http://192.241.234.75:5000/api/v1/recipeByCAtegoryAndSubcategory</a><br>
+            status -&gt; (true , false)<br>
+            data -&gt; it return "done rate"<br>
+            error -&gt; [] <br></p>
+        <pre><code>Headers <br>
+
+        </code></pre>
+        <pre><code>Request <br>
+            {
+            "user_id":0,
+            "category":14,
+            "subcategory":25
+            }
+        </code></pre>
+        <pre><code>Response <br>
+            {
+            "recipes": [
+            {
+            "id": 23,
+            "name": "مكرونة",
+            "prepare_time": 16,
+            "cooking_time": 30,
+            "servingperson": 5,
+            "chefnotes": "يجبوضعالعسلوهوساخنعليالبسبوسةعنداخراجهامنالفرن",
+            "steps": [
+            "اضفالبسبوسةوعليهاالبيكنجبودر",
+            "اضفالزباديعليالدقيق"
+            ],
+            "tags": [],
+            "status": 0,
+            "created_at": "2018-01-17 16:29:46",
+            "created_by": {
+            "username": "salem",
+            "id": 1
+            },
+            "category": {
+            "id": 14,
+            "name": "الغداء",
+            "description": "وجبات الغداء",
+            "parent_id": 0,
+            "cover": "http://192.241.234.75:5000/categories/cover/14ROASTEDSALMON-articleLarge.jpg",
+            "featured": 1,
+            "created_at": "2017-12-19 06:22:44",
+            "updated_at": "2017-12-19 06:22:44"
+            },
+            "sub_category": {
+            "id": 25,
+            "name": "اكلات هندي",
+            "description": "تيست",
+            "parent_id": 14,
+            "cover": "http://192.241.234.75:5000/categories/cover/07INDIAjp7-articleLarge.jpg",
+            "featured": 1,
+            "created_at": "2018-01-03 09:18:35",
+            "updated_at": "2018-01-03 09:18:35"
+            },
+            "featured": 0,
+            "media": [
+            {
+            "link": "http://192.241.234.75:5000/upload/media/images/foodimage1516206586.jpg",
+            "type": "image"
+            }
+            ],
+            "ingradient": [
+            {
+            "item": {
+            "id": 1,
+            "name": "طماطم",
+            "item_category_id": 1,
+            "created_at": "2017-12-31 05:10:15",
+            "updated_at": "2017-12-31 05:15:26",
+            "category": {
+            "id": 1,
+            "name": "خضروات",
+            "photo": "http://192.241.234.75:5000/categories/cover/logo.png",
+            "created_at": "2017-12-31 04:50:28",
+            "updated_at": "2017-12-31 04:58:28"
+            }
+            },
+            "unit": "kg",
+            "number": 12.5
+            }
+            ],
+            "comments": [],
+            "rate": 0,
+            "favorite": false
+            },
+            {
+            "id": 24,
+            "name": "مكرونة",
+            "prepare_time": 16,
+            "cooking_time": 30,
+            "servingperson": 5,
+            "chefnotes": "يجبوضعالعسلوهوساخنعليالبسبوسةعنداخراجهامنالفرن",
+            "steps": [
+            "اضفالبسبوسةوعليهاالبيكنجبودر",
+            "اضفالزباديعليالدقيق"
+            ],
+            "tags": [],
+            "status": 0,
+            "created_at": "2018-01-17 16:30:31",
+            "created_by": {
+            "username": "salem",
+            "id": 1
+            },
+            "category": {
+            "id": 14,
+            "name": "الغداء",
+            "description": "وجبات الغداء",
+            "parent_id": 0,
+            "cover": "http://192.241.234.75:5000/categories/cover/14ROASTEDSALMON-articleLarge.jpg",
+            "featured": 1,
+            "created_at": "2017-12-19 06:22:44",
+            "updated_at": "2017-12-19 06:22:44"
+            },
+            "sub_category": {
+            "id": 25,
+            "name": "اكلات هندي",
+            "description": "تيست",
+            "parent_id": 14,
+            "cover": "http://192.241.234.75:5000/categories/cover/07INDIAjp7-articleLarge.jpg",
+            "featured": 1,
+            "created_at": "2018-01-03 09:18:35",
+            "updated_at": "2018-01-03 09:18:35"
+            },
+            "featured": 0,
+            "media": [
+            {
+            "link": "http://192.241.234.75:5000/upload/media/images/foodimage1516206631.jpg",
+            "type": "image"
+            }
+            ],
+            "ingradient": [
+            {
+            "item": {
+            "id": 1,
+            "name": "طماطم",
+            "item_category_id": 1,
+            "created_at": "2017-12-31 05:10:15",
+            "updated_at": "2017-12-31 05:15:26",
+            "category": {
+            "id": 1,
+            "name": "خضروات",
+            "photo": "http://192.241.234.75:5000/categories/cover/logo.png",
+            "created_at": "2017-12-31 04:50:28",
+            "updated_at": "2017-12-31 04:58:28"
+            }
+            },
+            "unit": "kg",
+            "number": 12.5
+            }
+            ],
+            "comments": [],
+            "rate": 0,
+            "favorite": false
+            }
+            ]
+            }
+        </code></pre>
+
+        <!-- end of reset password -->
+    <!--endcategory and subcategory-->
+
+        <!-- fresh Units -->
+        <h1>SplashScreen </h1>
+        <p>Get : <a href="http://192.241.234.75:5000/api/v1/SplashScreen">http://192.241.234.75:5000/api/v1/SplashScreen</a><br>
+            status -&gt; (true , false)<br>
+            data -&gt; it return list of all SplashScreen<br>
+            error -&gt; <br></p>
+
+        <pre><code>Response <br>
+            {
+            "SplashScreen": {
+            "image320_503": "http://192.241.234.75:5000/uploads/320_503.jpg",
+            "image480_753": "http://192.241.234.75:5000/uploads/480_753.jpg",
+            "image640_960": "http://192.241.234.75:5000/uploads/640_960.jpg",
+            "image640_1136": "http://192.241.234.75:5000/uploads/640_1136.jpg",
+            "image750_1334": "http://192.241.234.75:5000/uploads/750_1334.jpg",
+            "image800_1255": "http://192.241.234.75:5000/uploads/800_1255.jpg",
+            "image1024_1463": "http://192.241.234.75:5000/uploads/1024_1463.jpg",
+            "image1080_1920": "http://192.241.234.75:5000/uploads/1080_1920.jpg",
+            "image1260_1977": "http://192.241.234.75:5000/uploads/1260_1977.jpg"
+            }
+            }
+
+        </code></pre>
+
+        <!-- end of units -->
+
+        <h1>Update User Device</h1>
+        <p>POST : <a href="http://192.241.234.75:5000/api/v1/UpdateUserDeviceToken">http://192.241.234.75:5000/api/v1/UpdateUserDeviceToken</a><br>
+            status -&gt; (true , false)<br>
+            data -&gt; it return token<br>
+            error -&gt; error messages will be "user not found" if user not found} <br></p>
+        <pre><code>Request <br>
+            {
+                "deviceToken":"sasasasasasa",
+                "type":"IOS",
+                "user_id":11 // optional,
+                "login":1 // optional
+}
+        </code></pre>
+        <pre><code>Response <br>
+        {
+    "status": true,
+    "data": "Data Updated",
+    "error": ""
+}
+         </code></pre>
+
+<!-- update user device -->
+
+        <!-- end of units -->
+
+        <h1>GetNotification For User</h1>
+        <p>Get : <a href="http://192.241.234.75:5000/api/v1/GetNotification/cSwtTJlhves:APA91bH916ng8Sff3abaefp6jjAFwnfGQwzxF1Hcoy_ainuGzK7wp1z1Cd4FbVRjNPuqVbbXuhXzcAD5OtCrQQ5RmKkuSCEOl_wApopbsOOkCojwq_ph2I_dR9d1F1Hq4pmXvXLf5fYj">http://192.241.234.75:5000/api/v1/GetNotification/cSwtTJlhves:APA91bH916ng8Sff3abaefp6jjAFwnfGQwzxF1Hcoy_ainuGzK7wp1z1Cd4FbVRjNPuqVbbXuhXzcAD5OtCrQQ5RmKkuSCEOl_wApopbsOOkCojwq_ph2I_dR9d1F1Hq4pmXvXLf5fYj</a><br>
+            status -&gt; (true , false)<br>
+            data -&gt; it return token<br>
+            error -&gt; error all notification <br></p>
+        <pre><code>Request <br>
+        {}
+        </code></pre>
+        <pre><code>Response <br>
+       {
+    "status": true,
+    "data": [
+        {
+            "id": 13,
+            "device_id": "2341",
+            "notification_object": {
+                "notification": {
+                    "title": "تعليق جديد",
+                    "body": "لديك تعليق جديدتعليق جديد",
+                    "type": "IOS",
+                    "sound": "default",
+                    "image": "http://127.0.0.1:8000/files/http://192.241.234.75:5000/uploads/imagerecipe512_512.jpg",
+                    "description": "لديك تعليق جديدتعليق جديد"
+                },
+                "priority": "high",
+                "content_available": true,
+                "to": "cSwtTJlhves:APA91bH916ng8Sff3abaefp6jjAFwnfGQwzxF1Hcoy_ainuGzK7wp1z1Cd4FbVRjNPuqVbbXuhXzcAD5OtCrQQ5RmKkuSCEOl_wApopbsOOkCojwq_ph2I_dR9d1F1Hq4pmXvXLf5fYj",
+                "data": {
+                    "recipe_id": 18,
+                    "id": 20,
+                    "user": {
+                        "id": 19,
+                        "name": "tesdst2",
+                        "email": "salemAhmed@gmail.com",
+                        "created_at": "2018-01-23 12:22:55",
+                        "updated_at": "2018-01-23 12:22:55",
+                        "username": "salemAhmed2",
+                        "phone": "",
+                        "photo": null,
+                        "facebook_id": null
+                    },
+                    "body": "تعليق جديد",
+                    "rate": 5
+                },
+                "notificationtype": "comment"
+            },
+            "status": "unread",
+            "created_at": "2018-02-07 11:39:05",
+            "updated_at": "2018-02-07 11:39:05"
+        }
+    ],
+    "error": ""
+}
+         </code></pre>
+
+<!-- update user device -->
+    </div>
+
+    <div class="dark-box">
+    </div>
+</div>
+</body>
+</html>

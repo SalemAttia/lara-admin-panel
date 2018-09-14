@@ -1,0 +1,11 @@
+<?php
+
+namespace App\Modules\DummyRoute\Middleware;
+use App\Modules\DummyRoute\Models\DummyRoute;
+use Closure;
+
+class DummyRoute
+{
+
+}
+}

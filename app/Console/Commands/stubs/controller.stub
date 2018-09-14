@@ -1,0 +1,91 @@
+<?php
+
+namespace App\Modules\DummyModel\Controllers;
+
+use Illuminate\Http\Request;
+use App\Modules\Core\Controllers\Controller;
+use App\Modules\DummyModel\Models\Modelname;
+
+
+
+class DummyClass extends Controller
+{
+
+       public function __construct()
+       {
+               $this->middleware(['AdminAuth', 'Roles']);
+       }
+
+
+        /**
+         *
+         * @return \Illuminate\Http\Response
+         */
+        public function index()
+        {
+            if(Modelname::$ModelFunctionsNames){
+                 $data = Modelname::with(Modelname::$ModelFunctionsNames)->get();
+            }else{
+                   $data = Modelname::all();
+             }
+            $cols = Modelname::$cols;
+            $xlx = Modelname::$xlx;
+
+             return view('DummyModel::list', [
+                        'data' => $data,
+                         'cols' => $cols,
+                          'xlx' => $xlx
+                    ]);
+        }
+
+            public function create()
+            {
+                $xlx = Modelname::$xlx;
+                return view('DummyModel::add_edit', [
+                    'action' => 'add',
+                    'data' => null,
+                    'xlx' => $xlx
+                ]);
+            }
+
+            public function store(Request $request)
+            {
+
+                $validation = Modelname::createValidation();
+
+                $data = $this->validate($request, $validation);
+
+                Modelname::create($data);
+
+                return redirect()->route('admin.Route.index')->with('success', 'DummyModel (' . array_first($data) . ') is created!');
+
+            }
+
+            public function show(Modelname $DummSmall)
+            {
+
+                return view('Dashboard::base.show', ['data' => $DummSmall->toArray()]);
+            }
+
+            public function edit(Modelname $DummSmall)
+            {
+                return view('DummyModel::add_edit', [
+                    'action' => 'edit',
+                    'data' => $DummSmall
+                ]);
+            }
+
+            public function update(Modelname $DummSmall, Request $request)
+            {
+                $validation = Modelname::updateValidation($DummSmall->id);
+                $data = $this->validate($request, $validation);
+                $DummyModel->update($data);
+                return redirect()->route('admin.Route.index')->with('success', 'DummyModel (' . array_first($data) . ') is updated!');
+            }
+
+            public function destroy(Modelname $DummSmall)
+            {
+                $DummSmall->delete();
+                return redirect()->route('admin.Route.index');
+            }
+}

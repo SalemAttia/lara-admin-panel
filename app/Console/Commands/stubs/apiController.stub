@@ -1,0 +1,69 @@
+<?php
+
+namespace App\Modules\ModuleName\Controllers;
+
+use App\Modules\Core\Controllers\Controller;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator;
+use App\Modules\ModuleName\Models\DummyModel;
+
+
+
+class DummyModelApiController extends Controller
+{
+
+
+        /**
+         *
+         * @return \Illuminate\Http\Response
+         */
+        public function ReturnAll(Request $request)
+        {
+            $limit = $request->has('limit') ? $request->limit : 10;
+            $offset = $request->has('offset') ? $request->offset : 0;
+            $items = DummyModel::limit($limit)->offset($offset)->get();
+            return response()->json(['DummyModels' => $items],200);
+
+        }
+
+        /**
+         *
+         * @return \Illuminate\Http\Response
+         */
+        public function ReturnById(Request $request)
+        {
+            $itemId = $request->id;
+            $item = DummyModel::where('id',$itemId)->first();
+            if(!$item){
+             return response()->json(null,203);
+            }
+            return MyResponse(0, $item, MassageEn()[0], 200);
+        }
+
+        public function search(Request $request)
+            {
+                $filed = $request->filed;
+                $order = $request->order;
+                $searchtext = $request->searchtext;
+
+                if($searchtext){
+                    $data = DummyModel::where($filed,$searchtext)->orderBy($filed,$order)->get();
+                }else{
+                    $data = DummyModel::orderBy($filed,$order)->get();
+                }
+                return MyResponse(0, $data, MassageEn()[0], 200);
+
+            }
+
+            public function DeleteItem(Request $request)
+            {
+                $id = $request->id;
+                $data = DummyModel::find($id)->delete();
+                if($data){
+                    return MyResponse(0, [], MassageEn()[0], 200);
+                }else{
+                    return MyResponse(1, [], MassageEn()[0], 200);
+                }
+
+            }
+}

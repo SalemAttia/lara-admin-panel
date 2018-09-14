@@ -1,0 +1,672 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title></title>
+
+    <link rel="stylesheet" href="css/style.css"/>
+  
+    <script src="js/all.js"></script>
+
+
+</head>
+
+<body class="">
+<a href="#" id="nav-button">
+      <span>
+        NAV
+        <img src="images/navbar.png"/>
+      </span>
+</a>
+<div class="tocify-wrapper">
+    <img src="images/logo.png"/>
+    <div id="toc">
+    </div>
+</div>
+<div class="page-wrapper">
+    <div class="dark-box"></div>
+    <div class="content">
+
+        <h1>All Teams</h1>
+        <p>GET : <a href="http://127.0.0.1:8000/api/v1/teams/10/0">http://127.0.0.1:8000/api/v1/teams/10/0</a>
+            <br>
+            status -&gt; (true , false)<br>
+            data -&gt; array of objects will be empty if no data found<br>
+            error -&gt; error messages will be empty if no error  <br>
+        </p>
+        <pre>
+            <code>
+                Header <br>
+                Content-Type : application/json,
+                Accept : application/json
+            </code>
+        </pre>
+        <pre>
+            <code>
+                Request <br>
+
+            </code>
+        </pre>
+        <pre>
+            <code>
+                Response
+                <br>
+                {
+    "data": [
+        {
+            "id": 1,
+            "title": "Dr. Cleora Halvorson PhD",
+            "users": [
+                {
+                    "id": 8,
+                    "name": "new",
+                    "email": "ahmedsalem994.as@gmail.com"
+                },
+                {
+                    "id": 9,
+                    "name": "new user",
+                    "email": "test.as@gmail.com"
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "title": "Ms. Antonette Littel Sr.",
+            "users": [
+                {
+                    "id": 8,
+                    "name": "new",
+                    "email": "ahmedsalem994.as@gmail.com"
+                },
+                {
+                    "id": 9,
+                    "name": "new user",
+                    "email": "test.as@gmail.com"
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "title": "Violette White",
+            "users": [
+                {
+                    "id": 9,
+                    "name": "new user",
+                    "email": "test.as@gmail.com"
+                }
+            ]
+        },
+        {
+            "id": 4,
+            "title": "Prof. Elouise Goodwin",
+            "users": [
+                {
+                    "id": 9,
+                    "name": "new user",
+                    "email": "test.as@gmail.com"
+                }
+            ]
+        },
+        {
+            "id": 5,
+            "title": "Velva Moore",
+            "users": [
+                {
+                    "id": 9,
+                    "name": "new user",
+                    "email": "test.as@gmail.com"
+                }
+            ]
+        },
+        {
+            "id": 6,
+            "title": "new team xyz",
+            "users": [
+                {
+                    "id": 9,
+                    "name": "new user",
+                    "email": "test.as@gmail.com"
+                }
+            ]
+        }
+    ],
+    "message": null,
+    "error": false
+}
+
+            </code>
+        </pre>
+        <!--//end of all users-->
+
+        <h1>Single Teams</h1>
+        <p>GET : <a href="http://127.0.0.1:8000/api/v1/teams/1">http://127.0.0.1:8000/api/v1/teams/1</a>
+            <br>
+            status -&gt; (true , false)<br>
+            data -&gt; array of objects will be empty if no data found<br>
+            error -&gt; error messages will be empty if no error  <br>
+        </p>
+        <pre>
+            <code>
+                Header <br>
+                Content-Type : application/json,
+                Accept : application/json
+            </code>
+        </pre>
+        <pre>
+            <code>
+                Request <br>
+
+            </code>
+        </pre>
+        <pre>
+            <code>
+                Response
+                <br>
+                {
+    "data": {
+        "id": 1,
+        "title": "Dr. Cleora Halvorson PhD"
+    },
+    "message": null,
+    "error": false
+}
+
+            </code>
+        </pre>
+        <!--end of single team-->
+
+        <h1>Delete Teams</h1>
+        <p>DELETE : <a href="http://127.0.0.1:8000/api/v1/teams/1">http://127.0.0.1:8000/api/v1/teams/1</a>
+            <br>
+            status -&gt; (true , false)<br>
+            data -&gt; array of objects will be empty if no data found<br>
+            error -&gt; error messages will be empty if no error  <br>
+        </p>
+        <pre>
+            <code>
+                Header <br>
+                Content-Type : application/json,
+                Accept : application/json
+            </code>
+        </pre>
+        <pre>
+            <code>
+                Request <br>
+
+            </code>
+        </pre>
+        <pre>
+            <code>
+                Response
+                <br>
+                {
+    "data": null,
+    "message": "Deleted Successfully",
+    "error": false
+}
+
+            </code>
+        </pre>
+        <!--end of single team-->
+
+        <h1>Update Team</h1>
+        <p>PUT : <a href="http://127.0.0.1:8000/api/v1/teams/1">http://127.0.0.1:8000/api/v1/teams/1</a>
+            <br>
+            status -&gt; (true , false)<br>
+            data -&gt; array of objects will be empty if no data found<br>
+            error -&gt; error messages will be empty if no error  <br>
+        </p>
+        <pre>
+            <code>
+                Header <br>
+                Content-Type : application/json,
+                Accept : application/json
+            </code>
+        </pre>
+        <pre>
+            <code>
+                Request <br>
+                {
+    "title":"test3"
+}
+            </code>
+        </pre>
+        <pre>
+            <code>
+                Response
+                <br>
+                {
+    "data": {
+        "id": 6,
+        "title": "test3"
+    }
+}
+
+
+            </code>
+        </pre>
+        <!--end of single team-->
+
+        <h1>Create New Team</h1>
+        <p>POST : <a href="http://127.0.0.1:8000/api/v1/teams">http://127.0.0.1:8000/api/v1/teams</a>
+            <br>
+            status -&gt; (true , false)<br>
+            data -&gt; array of objects will be empty if no data found<br>
+            error -&gt; error messages will be empty if no error  <br>
+        </p>
+        <pre>
+            <code>
+                Header <br>
+                Content-Type : application/json,
+                Accept : application/json
+            </code>
+        </pre>
+        <pre>
+            <code>
+                Request <br>
+                {
+    "title":"web development team"
+}
+            </code>
+        </pre>
+        <pre>
+            <code>
+                Response
+                <br>
+                {
+    "data": null,
+    "message": {
+        "title": [
+            "The title has already been taken."
+        ]
+    },
+    "error": true
+}
+
+
+            </code>
+        </pre>
+        <!--end of single team-->
+
+        <h1>All Users</h1>
+        <p>GET : <a href="http://127.0.0.1:8000/api/v1/users/10/0">http://127.0.0.1:8000/api/v1/users/10/0</a>
+            <br>
+            status -&gt; (true , false)<br>
+            data -&gt; array of objects will be empty if no data found<br>
+            error -&gt; error messages will be empty if no error  <br>
+        </p>
+        <pre>
+            <code>
+                Header <br>
+                Content-Type : application/json,
+                Accept : application/json
+            </code>
+        </pre>
+        <pre>
+            <code>
+                Request <br>
+
+            </code>
+        </pre>
+        <pre>
+            <code>
+                Response
+                <br>
+                {
+    "data": [
+        {
+            "id": 1,
+            "name": "Judith",
+            "email": "Judith@test.com",
+            "team": []
+        },
+        {
+            "id": 2,
+            "name": "Buck Sawayn",
+            "email": "mia.kunde@gmail.com",
+            "team": []
+        },
+        {
+            "id": 3,
+            "name": "Kyra Gaylord",
+            "email": "christy82@gmail.com",
+            "team": []
+        },
+        {
+            "id": 4,
+            "name": "Carole Turcotte",
+            "email": "sturner@hotmail.com",
+            "team": []
+        },
+        {
+            "id": 5,
+            "name": "Lempi Pouros",
+            "email": "zgulgowski@schneider.biz",
+            "team": []
+        },
+        {
+            "id": 6,
+            "name": "Ms. Dorothy Douglas",
+            "email": "sarai.lakin@ruecker.com",
+            "team": []
+        },
+        {
+            "id": 8,
+            "name": "new",
+            "email": "ahmedsalem994.as@gmail.com",
+            "team": [
+                {
+                    "id": 2,
+                    "title": "Ms. Antonette Littel Sr."
+                }
+            ]
+        },
+        {
+            "id": 9,
+            "name": "new user",
+            "email": "test.as@gmail.com",
+            "team": [
+                {
+                    "id": 2,
+                    "title": "Ms. Antonette Littel Sr."
+                },
+                {
+                    "id": 3,
+                    "title": "Violette White"
+                },
+                {
+                    "id": 4,
+                    "title": "Prof. Elouise Goodwin"
+                },
+                {
+                    "id": 5,
+                    "title": "Velva Moore"
+                },
+                {
+                    "id": 6,
+                    "title": "test3"
+                }
+            ]
+        }
+    ],
+    "message": null,
+    "error": false
+}
+
+
+            </code>
+        </pre>
+        <!--end of single team-->
+
+        <h1>Single User</h1>
+        <p>GET : <a href="http://127.0.0.1:8000/api/v1/users/1">http://127.0.0.1:8000/api/v1/users/1</a>
+            <br>
+            status -&gt; (true , false)<br>
+            data -&gt; array of objects will be empty if no data found<br>
+            error -&gt; error messages will be empty if no error  <br>
+        </p>
+        <pre>
+            <code>
+                Header <br>
+                Content-Type : application/json,
+                Accept : application/json
+            </code>
+        </pre>
+        <pre>
+            <code>
+                Request <br>
+
+            </code>
+        </pre>
+        <pre>
+            <code>
+                Response
+                <br>
+                {
+    "data": {
+        "id": 1,
+        "name": "Judith",
+        "email": "Judith@test.com",
+        "team": []
+    },
+    "message": null,
+    "error": false
+}
+
+
+            </code>
+        </pre>
+        <!--end of single team-->
+
+        <h1>Update User</h1>
+        <p>PUT : <a href="http://127.0.0.1:8000/api/v1/users/1">http://127.0.0.1:8000/api/v1/users/1</a>
+            <br>
+            status -&gt; (true , false)<br>
+            data -&gt; array of objects will be empty if no data found<br>
+            error -&gt; error messages will be empty if no error  <br>
+        </p>
+        <pre>
+            <code>
+                Header <br>
+                Content-Type : application/json,
+                Accept : application/json
+            </code>
+        </pre>
+        <pre>
+            <code>
+                Request <br>
+                {
+    "name":"test",
+    "email":"ahmedsalem994.as@gmail.com",
+    "password":"123456"
+}
+
+            </code>
+        </pre>
+        <pre>
+            <code>
+                Response
+                <br>
+                {
+    "data": {
+        "id": 8,
+        "name": "test",
+        "email": "ahmedsalem994.as@gmail.com"
+    }
+}
+
+
+            </code>
+        </pre>
+        <!--end of single team-->
+
+        <h1>Delete User</h1>
+        <p>DELETE : <a href="http://127.0.0.1:8000/api/v1/users/1">http://127.0.0.1:8000/api/v1/users/1</a>
+            <br>
+            status -&gt; (true , false)<br>
+            data -&gt; array of objects will be empty if no data found<br>
+            error -&gt; error messages will be empty if no error  <br>
+        </p>
+        <pre>
+            <code>
+                Header <br>
+                Content-Type : application/json,
+                Accept : application/json
+            </code>
+        </pre>
+        <pre>
+            <code>
+                Request <br>
+
+            </code>
+        </pre>
+        <pre>
+            <code>
+                Response
+                <br>
+                {
+    "data": null,
+    "message": "Deleted Successfully",
+    "error": false
+}
+
+
+            </code>
+        </pre>
+        <!--end of single team-->
+        <h1>Create New User</h1>
+        <p>POST : <a href="http://127.0.0.1:8000/api/v1/users">http://127.0.0.1:8000/api/v1/users</a>
+            <br>
+            status -&gt; (true , false)<br>
+            data -&gt; array of objects will be empty if no data found<br>
+            error -&gt; error messages will be empty if no error  <br>
+        </p>
+        <pre>
+            <code>
+                Header <br>
+                Content-Type : application/json,
+                Accept : application/json
+            </code>
+        </pre>
+        <pre>
+            <code>
+                Request <br>
+                {
+    "name":"test",
+    "email":"ahmedsalessssssm9s94s.as@gmail.com",
+    "password":"123456",
+    "teams":[3]
+}
+
+            </code>
+        </pre>
+        <pre>
+            <code>
+                Response
+                <br>
+                {
+    "data": {
+        "name": "test",
+        "email": "fdasda.as@gmail.com",
+        "id": 11
+    },
+    "message": "Created Successfully",
+    "error": false
+}
+
+
+            </code>
+        </pre>
+        <!--end of single team-->
+        <h1>Make Team Owner</h1>
+        <p>POST : <a href="http://127.0.0.1:8000/api/v1/user/teamOwner/3">http://127.0.0.1:8000/api/v1/user/teamOwner/{user_id}</a>
+            <br>
+            status -&gt; (true , false)<br>
+            data -&gt; array of objects will be empty if no data found<br>
+            error -&gt; error messages will be empty if no error  <br>
+        </p>
+        <pre>
+            <code>
+                Header <br>
+                Content-Type : application/json,
+                Accept : application/json
+            </code>
+        </pre>
+        <pre>
+            <code>
+                Request <br>
+                {
+    "team":2
+}
+
+            </code>
+        </pre>
+        <pre>
+            <code>
+                Response
+                <br>
+                {
+    "data": {
+        "id": 3,
+        "name": "Kyra Gaylord",
+        "email": "christy82@gmail.com",
+        "team": [
+            {
+                "id": 2,
+                "title": "Ms. Antonette Littel Sr."
+            }
+        ]
+    },
+    "message": "Created Successfully",
+    "error": false
+}
+
+
+            </code>
+        </pre>
+        <!--end of single team-->
+
+        <h1>Add  Team To User</h1>
+        <p>POST : <a href="http://127.0.0.1:8000/api/v1/user/teams/3">http://127.0.0.1:8000/api/v1/user/teams/{user_id}</a>
+            <br>
+            status -&gt; (true , false)<br>
+            data -&gt; array of objects will be empty if no data found<br>
+            error -&gt; error messages will be empty if no error  <br>
+        </p>
+        <pre>
+            <code>
+                Header <br>
+                Content-Type : application/json,
+                Accept : application/json
+            </code>
+        </pre>
+        <pre>
+            <code>
+                Request <br>
+                {
+    "teams":[5]
+}
+
+            </code>
+        </pre>
+        <pre>
+            <code>
+                Response
+                <br>
+                {
+    "data": {
+        "id": 3,
+        "name": "Kyra Gaylord",
+        "email": "christy82@gmail.com",
+        "team": [
+            {
+                "id": 2,
+                "title": "Ms. Antonette Littel Sr."
+            },
+            {
+                "id": 5,
+                "title": "Velva Moore"
+            }
+        ]
+    },
+    "message": "Created Successfully",
+    "error": false
+}
+
+
+            </code>
+        </pre>
+        <!--end of single team-->
+
+
+
+
+    </div>
+
+    <div class="dark-box">
+    </div>
+</div>
+</body>
+</html>

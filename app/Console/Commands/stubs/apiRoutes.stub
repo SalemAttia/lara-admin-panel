@@ -1,0 +1,11 @@
+<?php
+  Route::group(['prefix' => 'v1'], function () {
+    Route::post('getAll', 'DummyViewApiController@ReturnAll');
+    Route::post('getById', 'DummyViewApiController@ReturnById');
+    Route::get('DummyRoute/search', 'DummyViewApiController@search');
+    Route::get('DummyRoute/DeleteItem','DummyViewApiController@DeleteItem');
+    });
+
+    Route::group(['prefix' => 'v1','middleware' => 'auth:api'], function () {
+
+    });
